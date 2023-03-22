@@ -9,3 +9,14 @@ models/FINALbayHO11152022/fold_1/.DS_Store
 models/FINALbayHO11152022/fold_2/.DS_Store
 models/FINALbayHO11152022/fold_3/.DS_Store
 models/FINALbayHO11152022/fold_4/.DS_Store
+*.pt
+models/ffn_final_20/.DS_Store
+models/FINALbayHO04052022/fold_0/.DS_Store
+models/FINALbayHO04052022/fold_1/.DS_Store
+models/FINALbayHO04052022/fold_2/.DS_Store
+models/FINALbayHO04052022/fold_3/.DS_Store
+models/FINALbayHO04052022/fold_4/.DS_Store
+models/FINALbayHO04052022/.DS_Store
+*.pkl
+models/rfc_final_122/.DS_Store
+models/svm_final_15/.DS_Store
