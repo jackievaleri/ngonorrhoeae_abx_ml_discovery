@@ -3,3 +3,9 @@ src/.ipynb_checkpoints/02_make_tsne_plots_different_libraries-checkpoint.ipynb
 src/.ipynb_checkpoints/01_analyze_biochem_differences_between_screen_hits_and_nonhits-checkpoint.ipynb
 src/__pycache__/adme_pred.cpython-310.pyc
 *.png
+models/FINALbayHO11152022/.DS_Store
+models/FINALbayHO11152022/fold_0/.DS_Store
+models/FINALbayHO11152022/fold_1/.DS_Store
+models/FINALbayHO11152022/fold_2/.DS_Store
+models/FINALbayHO11152022/fold_3/.DS_Store
+models/FINALbayHO11152022/fold_4/.DS_Store
