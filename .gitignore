@@ -1,2 +1,5 @@
 
 src/.ipynb_checkpoints/02_make_tsne_plots_different_libraries-checkpoint.ipynb
+src/.ipynb_checkpoints/01_analyze_biochem_differences_between_screen_hits_and_nonhits-checkpoint.ipynb
+src/__pycache__/adme_pred.cpython-310.pyc
+*.png
