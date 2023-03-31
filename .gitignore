@@ -20,3 +20,4 @@ models/FINALbayHO04052022/.DS_Store
 *.pkl
 models/rfc_final_122/.DS_Store
 models/svm_final_15/.DS_Store
+data/library_info/PublicStructures.txt
