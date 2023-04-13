@@ -1,0 +1,696 @@
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+Loading pretrained parameter "encoder.encoder.0.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.0.W_i.weight".
+Loading pretrained parameter "encoder.encoder.0.W_h.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.weight".
+Loading pretrained parameter "encoder.encoder.0.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Loading pretrained parameter "ffn.7.weight".
+Loading pretrained parameter "ffn.7.bias".
+Moving model to cuda
+smiles,hit,rationale,rationale_score
+['[O-][N+](=O)c1ccc(s1)/C=N/NC(=O)c1ccncc1'],0.803,O=[N+]([O-])c1ccc([CH3:1])s1,0.579
+['[O-][N+](=O)c1ccc(o1)/C=C/C=C/1\\SC(=S)NC1=O'],0.758,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['Clc1ccc(c(c1)Cl)C(=O)Nc1nnc(o1)-c1cc(ccc1Cl)Cl'],0.842,,
+['[O-][N+](=O)c1ccc(o1)/C=C/C=C/1\\SC(=N)NC1=O'],0.763,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['[O-][N+](=O)c1ccc(s1)C(=O)Nc1nnc(o1)-c1cccs1'],0.851,O=[N+]([O-])c1ccc([CH3:1])s1,0.579
+['NS(=O)(=O)c1ccc(cc1)NC(=O)c1ccc(o1)[N+](=O)[O-]'],0.766,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['Nc1nnc(s1)Sc1ncc(s1)[N+](=O)[O-]'],0.856,O=[N+]([O-])c1cnc([SH:1])s1,0.952
+['[O-][N+](=O)c1ccc(s1)C(=O)Nc1nnc(o1)-c1ccco1'],0.929,O=[N+]([O-])c1ccc([CH3:1])s1,0.579
+['Nc1nnc(s1)-c1ccc(o1)[N+](=O)[O-]'],0.981,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['ClC1=NSSC1=Nc1nncs1'],0.593,,
+['Clc1cc(c(s1)Cl)CSC(=S)NCc1cccnc1'],0.879,S=[CH:1]SCc1c[cH:1]s[cH:1]1,0.643
+['NNC(=S)NCCc1ccc(cc1)Cl'],0.905,,
+['Cc1ccc2c(c([nH]c2c1)C(=O)O)Sc1ccc(cc1)Cl'],0.838,c1c[cH:1]cc2[nH][cH:1]c([SH:1])c12,0.675
+['ONC(=O)c1cccc(c1)C(=O)N/N=C/c1ccc(s1)[N+](=O)[O-]'],0.823,O=[N+]([O-])c1ccc([CH3:1])s1,0.579
+['CC(=CCN([C@@H](COC(=O)NCCCCCC(=O)NO)c1ccccc1)C(=O)C#Cc1ccccc1)C'],0.773,,
+['Oc1ccccc1C(=O)N/N=C/c1ccc(o1)S(=O)(=O)O'],0.831,O=[SH:1]c1ccc(C=[NH:1])o1,0.305
+['CN(Cc1ccccc1)C(=O)c1ccc(o1)[N+](=O)[O-]'],0.881,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['S=C(SCc1ncon1)N1CCSCC1'],0.648,S=C(N1CCSCC1)[SH:1],0.668
+['Cl[Zn]Cl'],0.518,,
+['S=C1SSC=C1c1ccccc1'],0.629,,
+['CCOC(=O)N=C1Oc2cc(c(cc2O1)Cl)Cl'],0.477,N(=c1o[cH:1][cH:1]o1)[CH2:1]O[CH3:1],0.200
+['COc1cc(c(c(c1)O)C(=O)Oc1cc(c(c(c1)O)C(=O)Oc1cc(c(c(c1)O)C(=O)N[C@@H](C)C(=O)O)C)C)C'],0.811,,
+['CCN(CC)C(=S)S[C@@H](C)C(=O)c1cc(ccc1O)Br'],0.787,C[C@H](SC(=S)[NH:1][CH3:1])[CH2:1][CH3:1],0.780
+['Cc1ccc(cc1)-c1nc(ncc1C(=O)O)N1CCSCC1'],0.800,,
+['Cc1cc(c(cc1Cl)Cl)S(=O)(=O)Nc1cccnc1'],0.829,Clc1c[cH:1][cH:1]cc1[S:1][NH2:1],0.568
+['COc1c(ccc2c1cc(c1c(cc3c(c21)OCO3)C(=O)O)[N+](=O)[O-])O'],0.835,O=[N+]([O-])c1c[cH:1][cH:1][cH:1][cH:1]1,0.405
+['Cc1ccc(cc1)Nc1c(c(c(c(c1C(=O)O)F)F)F)F'],0.801,,
+['Clc1cccc(c1SC(=O)N1CCOCC1)Cl'],0.697,Clc1cccc(Cl)c1[SH:1],0.393
+['Oc1c(cc(cc1C(=O)CSC(=S)N1CCOCC1)Br)Br'],0.781,,
+['Clc1ccc(cc1)N1NC(=S)SC1=S'],0.402,,
+['CCS(=O)(=O)C(=C1Nc2ccccc2N1)S(=O)(=O)CC'],0.438,CCS(=O)(=O)C(=[CH2:1])[SH:1]=O,0.653
+['[O-][N+](=O)c1cn(cn1)CC(=O)Nc1ccc(cc1Cl)Cl'],0.755,,
+['Clc1cc2c(c(c1)CSC(=S)N1CCSCC1)OCOC2'],0.754,S=C(N1CCSCC1)[SH:1],0.668
+['CNC(=S)Sc1ccc(cc1F)F'],0.740,S=[CH:1]Sc1cc[cH:1]c[cH:1]1,0.762
+['CN1SC(=O)c2ccccc21'],0.402,c1ccc2c(c1)[cH:1]s[n:1]2,0.125
+['CSC1=NN(CSc2c(cccc2Cl)Cl)C(=S)S1'],0.811,S=c1sc([SH:1])nn1C[SH:1],0.830
+['Nc1ccccc1Sc1c(cncc1Cl)Cl'],0.860,Clc1cncc(Cl)c1[SH:1],0.320
+['CS(=O)(=O)NCc1c(cccc1Sc1ccc(cc1)Cl)Cl'],0.770,c1cc(S[CH3:1])c([CH3:1])[cH:1]c1,0.152
+['OC(=O)c1cc(ccc1O)NCc1c(c(c(c(c1F)F)C(F)(F)F)F)F'],0.853,Oc1ccc(N[CH3:1])c[cH:1]1,0.159
+['Cc1nc(cc(n1)-c1ccccc1)Nc1ccc(c(c1)C(=O)O)O'],0.794,Oc1ccc(N[CH3:1])c[cH:1]1,0.159
+['COCc1nc(ncc1C(=O)O)N1CCN(CC1)c1ccccc1F'],0.945,,
+['CCN(CC)C(=S)S'],0.791,,
+['Cc1nc(c(c(c1C(=O)O)-c1ccc(cc1)F)C(=O)O)C'],0.872,,
+['C[C@@H]1CC=CC[C@H](NC(=O)[C@H](C)N(C)C(=O)c2ccccc2O1)c1ccccc1'],0.934,,
+['[O-][N+](=O)c1cc(c(cc1/C=C/c1ccc(c(c1)Cl)Cl)/C=C/c1ccc(c(c1)Cl)Cl)[N+](=O)[O-]'],0.961,O=[N+]([O-])c1c[cH:1][cH:1]c[cH:1]1,0.405
+['Clc1ccc(cc1)S(=O)(=O)Nc1ccccc1Sc1c(cncc1Cl)Cl'],0.954,c1ccc([SH:1])c(N[SH:1])c1,0.895
+['CN(Cc1cccs1)C(=S)SCc1cccs1'],0.905,CN(C[CH3:1])C(=S)SC[CH3:1],0.920
+['Clc1cccc(c1CSC(=S)Nc1ccccc1)Cl'],0.942,Clc1ccc[cH:1]c1C[SH:1],0.308
+['OC(=O)c1cc(ccc1O)/N=C\\c1ccc(c(c1)F)N1CCCC1'],0.901,,
+['Oc1c(cc2c(c1I)Oc1c(c(c(cc1C21OC(=O)c2c(c(c(c(c21)Cl)Cl)Cl)Cl)I)O)I)I'],0.986,Oc1c(I)c[cH:1][cH:1]c1I,0.483
+['ONC(=O)c1cccc(c1)C(=O)N/N=C/c1cc(ccc1[N+](=O)[O-])O'],0.908,O=[N+]([O-])c1cc[cH:1]c[cH:1]1,0.405
+['COC(=O)[C@@H](NC(=O)c1ccc(o1)[N+](=O)[O-])C(C)C'],0.940,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['CC[C@@H]1CC=CC[C@H](C)Oc2ccccc2C(=O)N(C)[C@H](Cc2ccccc2)C(=O)N1'],0.916,,
+['Oc1ccc(cc1Cl)NS(=O)(=O)c1ccc(cc1)Cl'],0.934,O=[SH:1]Nc1cc[cH:1][cH:1]c1,0.581
+['CC[C@@H](C)NCCOc1ccc(cc1)C(C)(C)c1ccccc1'],0.915,,
+['Nc1ncc(s1)[N+](=O)[O-]'],0.923,,
+['COc1cc(c2c(c1C=O)Oc1c(c(c(c3c1[C@@H](O)OC3=O)O)C)OC2=O)C'],0.905,,
+['Cc1cc2c(c(c1C(=O)O)O)C(=O)c1c(cc(cc1C2=O)O)O'],0.953,c1c2c([cH:1]c[cH:1]1)[CH2:1][CH:1]=[CH:1][CH2:1]2,0.292
+['CC(C)(C)c1ccc(cc1)OCCCNCc1ccccc1'],0.917,,
+['COc1ccccc1C1CCN(CCCOc2ccc(cc2)Cl)CC1'],0.910,,
+['CCOC(=S)SSC(=S)OCC'],0.971,CCOC(=S)SS[CH:1]=S,0.980
+['[O-][N+](=O)c1ccc(o1)C(=O)ONC(=O)c1ccc(cc1)OC(F)F'],0.908,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['ONC(=O)c1ccc(cc1)C(=O)N/N=C/c1cc(cc(c1O)[N+](=O)[O-])Br'],0.926,O=[N+]([O-])c1c[cH:1]c[cH:1][cH:1]1,0.405
+['[O-][N+](=O)c1ccc(o1)C(=O)Nc1ccccc1Br'],0.942,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['CNC1=CC(=O)c2ccccc2C1=O'],0.918,O=C1C=C([NH2:1])C(=O)[CH:1]=[CH:1]1,0.983
+['[O-][N+](=O)c1ccc(o1)/C=C/C=N/N1CC(=O)NC1=O'],0.988,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['Oc1ccccc1C(=O)c1[nH]c(c(c1-n1c(c(cc1C(=O)c1ccccc1O)Cl)Cl)Cl)Cl'],0.909,,
+['[O-][N+](=O)c1cc(cc(c1)[N+](=O)[O-])C(=O)Nc1cc(cc(c1)Cl)Cl'],0.923,O=[N+]([O-])c1c[cH:1]c[cH:1]c1,0.405
+['CO/N=C(\\C(=O)N[C@H]1[C@H]2SCC(=C(N2C1=O)C(=O)O)CN1C=CC(=N)N1CCO)c1csc(n1)N'],0.994,,
+['[O-][N+](=O)c1cnc(s1)NC(=O)c1cccs1'],0.931,O=[N+]([O-])c1cnc([NH2:1])s1,0.923
+['[O-][N+](=O)c1cnc(s1)NC(=O)c1ccc(c(c1)Cl)[N+](=O)[O-]'],0.982,O=[N+]([O-])c1cnc([NH2:1])s1,0.923
+['Oc1ccc(cc1)C(=O)N/N=C/c1ccc(s1)[N+](=O)[O-]'],0.944,O=[N+]([O-])c1ccc([CH3:1])s1,0.579
+['[O-][N+](=O)c1ccc(o1)/C=N/NC(=O)c1cc2ccccc2o1'],0.981,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['[O-][N+](=O)c1cccc(c1)NCC(=O)N/N=C/c1ccc(o1)[N+](=O)[O-]'],0.984,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['CCCCCC(=O)N/N=C/c1ccc(o1)[N+](=O)[O-]'],0.938,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['Oc1ccccc1C(=O)N/N=C/c1cc(cc(c1O)Cl)Cl'],0.918,Oc1c([CH3:1])cc(Cl)c[cH:1]1,0.142
+['ONC(=O)c1cccc(c1)C(=O)N/N=C/c1cc(cc(c1O)Cl)Cl'],0.916,Oc1c([CH3:1])cc(Cl)c[cH:1]1,0.142
+['CC(C)[C@@H]1N(C)C(=O)c2ccccc2O[C@H](C)CC=CC[C@H](NC1=O)c1ccccc1'],0.914,,
+['CC(C)[C@H]1N(C)C(=O)c2ccccc2O[C@H](C)CC=CC[C@H](NC1=O)c1ccc(cc1)F'],0.901,,
+['CC(C)[C@H]1N(C)C(=O)c2ccccc2O[C@H](C)CC=CC[C@H](NC1=O)c1ccccc1'],0.921,,
+['CN1C[C@H]2C[C@@H]1CN2c1cc2c(cc1F)C(=O)C(=CN2C1CC1)C(=O)O'],0.999,,
+['OC(=O)C1=CN(C2CC2)c2c(cc(c(c2C#N)N2C[C@@H]3NCCO[C@H]3C2)F)C1=O'],0.996,,
+['CO/N=C(/C(=O)N[C@H]1[C@H]2SCC(=C(N2C1=O)C(=O)O)CN1C=CC(=N)N1CCO)c1csc(n1)N'],0.985,,
+['Oc1ccc2ccccc2c1SSc1c(ccc2ccccc12)O'],0.942,Oc1cc[cH:1][cH:1]c1S[SH:1],0.990
+['C[C@H]1COc2c(c(cc3c2N1C=C(C(=O)O)C3=O)F)F'],0.993,,
+['[O-][N+](=O)c1ccc(s1)/C=N/NC(=O)Nc1ccccc1'],0.932,O=[N+]([O-])c1ccc([CH3:1])s1,0.579
+['CCCCCCC[N+](CC)(CC)CCCCc1ccc(cc1)Cl'],0.974,C(CC[N+:1]CCC[CH3:1])C[CH3:1],0.141
+['OC(=O)C[C@@H](S[Au])C(=O)O'],1.000,O=C(O)[C@@H](C[CH2:1]O)S[Au],1.000
+['[O-][N+](=O)c1ccc(cc1)NC(=S)NCc1ccc(c(c1)Cl)Cl'],0.901,S=[CH:1]NCc1cc[cH:1][cH:1]c1,0.139
+['CO[C@H]1/C=C\\O[C@@]2(C)Oc3c(c(c4c(c3C2=O)C(=O)/C(=C/NN2CCN(C)CC2)[C@@H](NC(=O)/C(=C\\C=C/[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(=O)C)[C@@H]1C)C)C4=O)O)C'],0.943,,
+['[O-][N+](=O)c1cnc(s1)NC(=O)c1cccc(c1)Cl'],0.930,O=[N+]([O-])c1cnc([NH2:1])s1,0.923
+['[O-][N+](=O)c1ccc(o1)/C=N/NS(=O)(=O)c1ccc(cc1)Cl'],0.973,O=[N+]([O-])c1ccc([CH3:1])o1,0.510
+['CN(C)[C@H]1[C@@H]2C[C@@H]3[C@H](O)c4c(ccc(c4C(=O)[C@@H]3C(=O)[C@]2(O)C(=C(C(=O)N)C1=O)O)O)Cl'],0.946,,
+['O=C1C=CC(=O)c2ccccc21'],0.974,C1=C[CH2:1]c2ccccc2[CH2:1]1,0.292
+Elapsed time = 2 days, 20:34:08
