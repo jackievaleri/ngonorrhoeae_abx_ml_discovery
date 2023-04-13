@@ -12,8 +12,9 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 * other neural model training - attention model, new GNNs on pk+37K
 
 # TODO
-* model training - GNN for PK, GNN for pk+37K
-* shallow model training - RFC, SVM, FFN on pk+37k
-* using models for prediction
-* hyperopt of all models
-* curating predictions for 800k, molport
+* 04 - model training - GNN for PK, GNN for pk+37K
+* 04 - shallow model training - RFC, SVM, FFN on pk+37k
+* 04 - hyperopt of all models
+* 05 - model comparison plot
+* 06 - using models for prediction
+* 06 - curating predictions for 800k, molport
