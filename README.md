@@ -4,7 +4,9 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 # DONE
 * 01 - biochem comparison of PK hits + non-hits; biochem comparison of 37K+PK hits + non-hits; biochem comparison of model incorrect predictions
 * 02 - tSNE of 37K, abx, PK; tSNE of hits, nonhits, abx
-* 03: data prep for ml: pk, pk+37k, pk+37k+val
+* 03 - data prep for ml: pk, pk+37k, pk+37k+val
+* 07 - substruct interpretation
+* 08 - negative dataset test
 
 # IN PROGRESS
 * other neural model training - attention model, new GNNs on pk+37K
@@ -15,4 +17,3 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 * using models for prediction
 * hyperopt of all models
 * curating predictions for 800k, molport
-* substruct interpret of nitro groups
