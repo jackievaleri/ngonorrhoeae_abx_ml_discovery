@@ -466,3 +466,5 @@ models/FINALbayHO04052022/verbose.log
 out/.DS_Store
 out/controls_with_diff_neg_datasets/.DS_Store
 out/experiment_to_test_different_negative_datasets/.DS_Store
+.DS_Store
+data/.DS_Store
