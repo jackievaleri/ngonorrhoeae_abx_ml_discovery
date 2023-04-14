@@ -14,9 +14,9 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 * 08 - negative dataset test
 
 # IN PROGRESS
-* other neural model training - attention model, new GNNs on pk+37K
+* 06 - curating predictions for 800k, molport
 
 # TODO
+* 04 - other neural model training - attention model custom GNN code
 * 04 - clean up chemberta code
 * 05 - model comparison plot
-* 06 - curating predictions for 800k, molport
