@@ -16,6 +16,7 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 
 # TODO
 * 04 - model training - GNN for pk+37K, +1st round, +3 rounds
+* 04 - clean up chemberta code
 * 05 - model comparison plot
 * 06 - using models for prediction
 * 06 - curating predictions for 800k, molport
