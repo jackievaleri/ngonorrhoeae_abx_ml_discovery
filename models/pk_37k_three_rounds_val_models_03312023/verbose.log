@@ -1,0 +1,146 @@
+Creating search space using parameters ['ffn_num_layers', 'linked_hidden_size', 'depth', 'dropout'].
+No manual trials loaded as part of hyperparameter search
+Initiating trial with seed 0
+Loaded 0 previous trials
+Parameters assigned with random search, 10 random trials remaining
+Trial results with seed 0
+{'depth': 5, 'dropout': 0.1, 'ffn_num_layers': 1, 'linked_hidden_size': 1700}
+num params: 6,259,601
+0.4402838708034039 +/- 0.052253475763376925 prc-auc
+Initiating trial with seed 1
+Loaded 1 previous trials
+Parameters assigned with random search, 9 random trials remaining
+Trial results with seed 1
+{'depth': 3, 'dropout': 0.2, 'ffn_num_layers': 2, 'linked_hidden_size': 1400}
+num params: 6,556,201
+0.45874993481901905 +/- 0.0540521050139544 prc-auc
+Initiating trial with seed 2
+Loaded 2 previous trials
+Parameters assigned with random search, 8 random trials remaining
+Trial results with seed 2
+{'depth': 5, 'dropout': 0.15000000000000002, 'ffn_num_layers': 1, 'linked_hidden_size': 1600}
+num params: 5,571,401
+0.4479032539887717 +/- 0.05121106300140378 prc-auc
+Initiating trial with seed 3
+Loaded 3 previous trials
+Parameters assigned with random search, 7 random trials remaining
+Trial results with seed 3
+{'depth': 5, 'dropout': 0.05, 'ffn_num_layers': 2, 'linked_hidden_size': 2200}
+num params: 15,582,601
+0.4549684228319089 +/- 0.06292353508594073 prc-auc
+Initiating trial with seed 4
+Loaded 4 previous trials
+Parameters assigned with random search, 6 random trials remaining
+Trial results with seed 4
+{'depth': 5, 'dropout': 0.05, 'ffn_num_layers': 2, 'linked_hidden_size': 700}
+num params: 1,808,101
+0.4620799409162327 +/- 0.055214143710101055 prc-auc
+Initiating trial with seed 5
+Loaded 5 previous trials
+Parameters assigned with random search, 5 random trials remaining
+Trial results with seed 5
+{'depth': 4, 'dropout': 0.2, 'ffn_num_layers': 1, 'linked_hidden_size': 1600}
+num params: 5,571,401
+0.45688515628449833 +/- 0.060027056642954185 prc-auc
+Initiating trial with seed 6
+Loaded 6 previous trials
+Parameters assigned with random search, 4 random trials remaining
+Trial results with seed 6
+{'depth': 4, 'dropout': 0.4, 'ffn_num_layers': 1, 'linked_hidden_size': 1700}
+num params: 6,259,601
+0.4539661372025277 +/- 0.0518486329381181 prc-auc
+Initiating trial with seed 7
+Loaded 7 previous trials
+Parameters assigned with random search, 3 random trials remaining
+Trial results with seed 7
+{'depth': 5, 'dropout': 0.25, 'ffn_num_layers': 2, 'linked_hidden_size': 800}
+num params: 2,306,401
+0.4702758389269522 +/- 0.05119453294687804 prc-auc
+Initiating trial with seed 8
+Loaded 8 previous trials
+Parameters assigned with random search, 2 random trials remaining
+Trial results with seed 8
+{'depth': 5, 'dropout': 0.4, 'ffn_num_layers': 1, 'linked_hidden_size': 1400}
+num params: 4,315,001
+0.421058410455334 +/- 0.04018623669708967 prc-auc
+Initiating trial with seed 9
+Loaded 9 previous trials
+Parameters assigned with random search, 1 random trials remaining
+Trial results with seed 9
+{'depth': 3, 'dropout': 0.05, 'ffn_num_layers': 3, 'linked_hidden_size': 1500}
+num params: 9,726,001
+0.4626831781306498 +/- 0.06152962785261924 prc-auc
+Initiating trial with seed 10
+Loaded 10 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 10
+{'depth': 2, 'dropout': 0.30000000000000004, 'ffn_num_layers': 3, 'linked_hidden_size': 300}
+num params: 505,201
+0.46594599494986666 +/- 0.06425269930800094 prc-auc
+Initiating trial with seed 11
+Loaded 11 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 11
+{'depth': 6, 'dropout': 0.30000000000000004, 'ffn_num_layers': 3, 'linked_hidden_size': 900}
+num params: 3,675,601
+0.4687595281431133 +/- 0.05874486680145785 prc-auc
+Initiating trial with seed 12
+Loaded 12 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 12
+{'depth': 3, 'dropout': 0.30000000000000004, 'ffn_num_layers': 2, 'linked_hidden_size': 2400}
+num params: 18,439,201
+0.45110964644025947 +/- 0.05671810131383717 prc-auc
+Initiating trial with seed 13
+Loaded 13 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 13
+{'depth': 6, 'dropout': 0.25, 'ffn_num_layers': 3, 'linked_hidden_size': 300}
+num params: 505,201
+0.47426974573966796 +/- 0.04742633405140708 prc-auc
+Initiating trial with seed 14
+Loaded 14 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 14
+{'depth': 6, 'dropout': 0.35000000000000003, 'ffn_num_layers': 3, 'linked_hidden_size': 300}
+num params: 505,201
+0.482570097411868 +/- 0.04909247217540909 prc-auc
+Initiating trial with seed 15
+Loaded 15 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 15
+{'depth': 6, 'dropout': 0.35000000000000003, 'ffn_num_layers': 3, 'linked_hidden_size': 1100}
+num params: 5,372,401
+0.46971014595078275 +/- 0.0521809501785153 prc-auc
+Initiating trial with seed 16
+Loaded 16 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 16
+{'depth': 2, 'dropout': 0.35000000000000003, 'ffn_num_layers': 3, 'linked_hidden_size': 500}
+num params: 1,242,001
+0.4457390895880943 +/- 0.06038463709901657 prc-auc
+Initiating trial with seed 17
+Loaded 17 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 17
+{'depth': 6, 'dropout': 0.25, 'ffn_num_layers': 3, 'linked_hidden_size': 400}
+num params: 833,601
+0.48560833452907726 +/- 0.05567827156867362 prc-auc
+Initiating trial with seed 18
+Loaded 18 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 18
+{'depth': 6, 'dropout': 0.35000000000000003, 'ffn_num_layers': 3, 'linked_hidden_size': 500}
+num params: 1,242,001
+0.4779759901366207 +/- 0.04545584886458588 prc-auc
+Initiating trial with seed 19
+Loaded 19 previous trials
+Parameters assigned with TPE directed search
+Trial results with seed 19
+{'depth': 6, 'dropout': 0.25, 'ffn_num_layers': 3, 'linked_hidden_size': 500}
+num params: 1,242,001
+0.4759085323663766 +/- 0.04773759937703029 prc-auc
+Best trial, with seed 17
+{'depth': 6, 'dropout': 0.25, 'ffn_num_layers': 3, 'linked_hidden_size': 400}
+num params: 833,601
+0.48560833452907726 +/- 0.05567827156867362 prc-auc

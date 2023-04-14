@@ -1,0 +1,19 @@
+Fold 0
+Test prc-auc = 0.3462394595729979
+Test auc = 0.7388960109924356
+Fold 1
+Test prc-auc = 0.5958669847964011
+Test auc = 0.8630733577227477
+Fold 2
+Test prc-auc = 0.49973531836657653
+Test auc = 0.8878763251700545
+3-fold cross validation
+	Seed 0 ==> test prc-auc = 0.346239
+	Seed 0 ==> test auc = 0.738896
+	Seed 1 ==> test prc-auc = 0.595867
+	Seed 1 ==> test auc = 0.863073
+	Seed 2 ==> test prc-auc = 0.499735
+	Seed 2 ==> test auc = 0.887876
+Overall test prc-auc = 0.480614 +/- 0.102803
+Overall test auc = 0.829949 +/- 0.065175
+Elapsed time = 0:20:37

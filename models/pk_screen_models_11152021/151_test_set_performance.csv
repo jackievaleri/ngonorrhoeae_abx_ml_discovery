@@ -1,0 +1,2 @@
+,num,init_lr,dropout,hiddensize,ffn num layers,depth,auroc,apr
+151,151,0.001,0.3,1200,3,4,0.806088611,0.587259192
