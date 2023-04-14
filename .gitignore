@@ -468,3 +468,5 @@ out/controls_with_diff_neg_datasets/.DS_Store
 out/experiment_to_test_different_negative_datasets/.DS_Store
 .DS_Store
 data/.DS_Store
+data/data_prep_for_ml/data_prep_for_ml_pk_37k_screen/FULL_03_19_2022_for_sklearn.csv
+data/data_prep_for_ml/data_prep_for_ml_pk_37k_screen/TRAIN_03_19_2022_for_sklearn.csv
