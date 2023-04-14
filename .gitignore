@@ -751,3 +751,10 @@ models/other_models/ffn_hyperopt_pk_37k/20/fold_1/test_scores.json
 models/other_models/ffn_hyperopt_pk_37k/20/fold_1/model_0/events.out.tfevents.1664389379.its-gpu-time-4-copy2
 models/other_models/ffn_hyperopt_pk_37k/20/fold_0/test_scores.json
 models/other_models/ffn_hyperopt_pk_37k/20/fold_0/model_0/events.out.tfevents.1664387572.its-gpu-time-4-copy2
+data/library_info/Enamine_Diverse_REAL_drug-like_43.8M_cxsmiles.cxsmiles
+data/library_info/cleaned_full_all_dbs_04_19_2022.csv
+data/library_info/cleaned_full_all_dbs_04_19_2022.npz
+out/predictions_from_models/pk_37k_1round_model/800k/broad800K_melis_predictions_with_FINALbayHO11152022_11_16_2022.csv
+out/predictions_from_models/pk_37k_1round_model/5m/extended_screen_set_with_FINALbayHO11152022_melis_predictions_11_22_2022.csv
+out/predictions_from_models/pk_37k_model/5m/extended_screen_set_melis_predictions_05_01_2022.csv
+data/library_info/broad800k.npz
