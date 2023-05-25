@@ -1,12 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from rdkit import Chem
-from rdkit.Chem import MCS
-from rdkit.Chem import PandasTools
+from rdkit import Chem, DataStructs
+from rdkit.Chem import MCS, Descriptors, PandasTools, AllChem
 from rdkit.Chem.FilterCatalog import FilterCatalog, FilterCatalogParams
-from rdkit import DataStructs
-from rdkit.Chem import Descriptors
+from rdkit.Chem.Scaffolds import MurckoScaffold
+from rdkit.Chem.Draw import rdMolDraw2D
+from rdkit.ML.Cluster import Butina
+from sklearn.cluster import AgglomerativeClustering
+from adme_pred import ADME # pip install ADME_predict is NOT the right one
 
 # SECTION 1: MOLECULAR FILTERS
 def filter_for_logp_less_than(df, mols, thresh = 5):
@@ -16,21 +18,23 @@ def filter_for_logp_less_than(df, mols, thresh = 5):
     mols = [m for i,m in enumerate(mols) if keep_indices[i]]
     return(df, mols)
 
-def check_pains_brenk(df, mols):
+def check_pains_brenk(df, mols, method = 'both', thresh = 0):
     # initialize filter
     params = FilterCatalogParams()
-    params.AddCatalog(FilterCatalogParams.FilterCatalogs.PAINS)
-    params.AddCatalog(FilterCatalogParams.FilterCatalogs.BRENK)
+    if method == 'both' or method == 'pains':
+        params.AddCatalog(FilterCatalogParams.FilterCatalogs.PAINS)
+    if method == 'both' or method == 'brenk':
+        params.AddCatalog(FilterCatalogParams.FilterCatalogs.BRENK)
     catalog = FilterCatalog(params)
 
     def search_for_pains_or_brenk(mol):
-        entry = catalog.GetFirstMatch(mol)  # Get the first matching PAINS or Brenk
-        if entry is not None:
-            return(False) # contains bad
+        entry = catalog.GetMatches(mol)  # Get all matching PAINS or Brenk
+        if entry is None:
+            return(True)
         else:
-            return(True) # clean
+            return(len(entry) <= thresh)
 
-    keep_indices = [search_for_pains_or_brenk(m) for m in tqdm(mols)]
+    keep_indices = [search_for_pains_or_brenk(m) for m in mols]
     df = df[keep_indices]
     mols = [m for i,m in enumerate(mols) if keep_indices[i]]
     print('length of all preds with clean (no PAINS or Brenk) mols: ', len(df))
@@ -87,9 +91,18 @@ def filter_for_mw_bounds(df, mols, lower_bound = 100, upper_bound = 600):
     mols = [m for i,m in enumerate(mols) if keep_indices[i]]
     return(df, mols)
 
+def filter_for_rotatable_bonds(df, mols, smiles_column, thresh = 5):
+    smis = list(df[smiles_column])
+    bonds = [ADME(smi)._n_rot_bonds() for smi in smis]
+    keep_indices = [bond < thresh for bond in bonds]
+    df = df[keep_indices]
+    print('length of df with num rotatable bonds < ' + str(thresh) + ': ', len(df))
+    mols = [m for i,m in enumerate(mols) if keep_indices[i]]
+    return(df, mols)
+
 def keep_valid_molecules(df, smiles_column):
     smis = list(df[smiles_column])
-    mols = [Chem.MolFromSmiles(smi) for smi in tqdm(smis)]
+    mols = [Chem.MolFromSmiles(smi) for smi in smis]
     keep_indices = [m is not None for m in mols]
     df = df[keep_indices]
     print('length of df with valid mols: ', len(df))
@@ -98,6 +111,23 @@ def keep_valid_molecules(df, smiles_column):
     for m, smi in zip(mols, smis):
         m.SetProp('SMILES', smi)
     return(df, mols)
+
+def deduplicate_on_tan_sim(df, mols):
+    # deduplicate based on tanimoto similarity
+    fps = [Chem.RDKFingerprint(m) for m in mols]
+    keep_indices = [True] * len(fps)
+    for i, f1 in enumerate(fps):
+        tans = DataStructs.BulkTanimotoSimilarity(f1, fps)
+        for j, tan in enumerate(tans):
+            if tan < 1.0 or i == j:
+                continue
+            else:
+                if keep_indices[i]:
+                    keep_indices[j] = False
+
+    df = df[keep_indices]
+    print('length of all preds deduplicated: ', len(df))
+    return(df)
 
 # SECTION 2: PROCESSING FUNCTIONS
 def rank_order_preds(smis, scos, path):
@@ -290,14 +320,16 @@ def compute_tanimoto_against_abx(smis, merging_df):
     gen_mols = get_lowest_tanimoto_from_drug_set(smis, clean_mols, clean_smis, col_list, merging_df, clean_names)
     return(gen_mols)
 
-def compute_tanimoto_against_training_set(smis, merging_df, train_set_path):
+def compute_tanimoto_against_training_set(smis, merging_df, train_set_path, hit_col = 'hit', just_hits = False):
     df = pd.read_csv(train_set_path)
+    if just_hits:
+        df = df[df[hit_col] == 1]
     clean_mols, clean_smis, clean_names = clean_up_names_and_smiles(df, name_col = 'Name', smiles_col = 'SMILES')
     col_list = ['SMILES', 'tanimoto similarity to closest train set', 'closest train set smiles', 'closest train set name']
     gen_mols = get_lowest_tanimoto_from_drug_set(smis, clean_mols, clean_smis, col_list, merging_df, clean_names)
     return(gen_mols)
 
-def evaluate_similarities(df, smiles_col, path, train_set_path):
+def evaluate_similarities(df, smiles_col, path, train_set_path, thresh_name = '04', hit_col = 'hit', just_hits = False):
 
     def plot_tanimoto_score_plot(df, tanimoto_col, path, name):
         plt.figure(figsize = (5,3), dpi = 300)
@@ -310,9 +342,137 @@ def evaluate_similarities(df, smiles_col, path, train_set_path):
     print("Computing tanimoto scores against abx...")
     smis = list(df[smiles_col])
     df = compute_tanimoto_against_abx(smis, df)
-    plot_tanimoto_score_plot(df, 'tanimoto similarity to closest abx', path, 'inh04_tan_to_closest_abx')
+    plot_tanimoto_score_plot(df, 'tanimoto similarity to closest abx', path, 'inh' + thresh_name + '_tan_to_closest_abx')
     
     print("Computing tanimoto scores against training set...")
-    df = compute_tanimoto_against_training_set(smis, df, train_set_path = train_set_path)
-    plot_tanimoto_score_plot(df, 'tanimoto similarity to closest train set', path, 'inh04_tan_to_closest_train_set')
+    df = compute_tanimoto_against_training_set(smis, df, train_set_path = train_set_path, hit_col = hit_col, just_hits = just_hits)
+    plot_tanimoto_score_plot(df, 'tanimoto similarity to closest train set', path, 'inh' + thresh_name + '_tan_to_closest_train_set')
     return(df)
+
+# SECTION 3: Clustering
+
+# code adapted from https://www.macinchem.org/reviews/clustering/clustering.php
+def clusterFps(fps,num_clusters):
+
+    tan_array = [DataStructs.BulkTanimotoSimilarity(i, fps) for i in fps]
+    tan_array = np.array(tan_array)
+    clusterer= AgglomerativeClustering(n_clusters = num_clusters, compute_full_tree = True).fit(tan_array)
+    final_clusters = {}
+    for ix, m in enumerate(clusterer.labels_):
+        if m in final_clusters:
+            curr_list = final_clusters[m]
+            curr_list.append(ix)
+            final_clusters[m] = curr_list
+        else:
+            final_clusters[m] = [ix]
+    
+    return clusterer.labels_, final_clusters
+
+def make_legends(mols, smis, df, smiles_col, name_col, hit_col, tans):
+    row_num = 0
+    legends = []
+    for smi in smis:
+        try:
+            row = df.iloc[row_num,:]
+            try:
+                actualrowname = str(row.loc[name_col])
+            except:
+                actualrowname = str(row.loc[smiles_col])
+            if len(actualrowname) > 20:
+                actualrowname = actualrowname[0:20] + '...'
+            hit = str(np.round(float(row.loc[hit_col]),3))
+            actual_row_num = str(row.loc['row_num'])
+
+            if tans:
+                tan_train = str(np.round(float(row.loc['tanimoto similarity to closest train set']),3))
+                tan_abx = str(np.round(float(row.loc['tanimoto similarity to closest abx']),3))
+                legend = actualrowname + '\n' + 'tantrain: ' + tan_train + '\n' + 'tanabx: ' + tan_abx + '\n score: ' + hit
+            else:
+                legend = actualrowname + '\n' + '\n score: ' + hit
+
+        except Exception as e:
+            print(e)
+            actual_row_num = str(row.loc['row_num'])
+            legend = 'row: ' + actual_row_num
+
+        mols[row_num].SetProp('legend', legend)
+        row_num = row_num + 1
+    return(mols) 
+
+def extract_legends_and_plot(df, name, folder, num_clusters = 30, smiles_col = 'smiles', name_col = 'Name', hit_col = 'hit', tans = True):
+    df['row_num'] = list(range(len(df)))
+    df = df.drop_duplicates(subset=smiles_col)
+    smis = list(df[smiles_col])
+    
+    mols = [Chem.MolFromSmiles(mol) for mol in smis]
+    mols = make_legends(mols, smis, df, smiles_col = smiles_col, name_col = name_col, hit_col = hit_col, tans = tans)
+    
+    # code with help from the OG greg landrum: https://gist.github.com/greglandrum/d5f12058682f6b336905450e278d3399
+    molsPerRow = 5
+    subImgSize= (500,500)
+    
+    murcks = [MurckoScaffold.GetScaffoldForMol(mol) for mol in mols]
+    fps = [AllChem.GetMorganFingerprintAsBitVect(x,2,1024) for x in murcks]
+    raw_cluster_labels, final_clusters=clusterFps(fps,num_clusters=num_clusters)
+    
+    #show clusters
+    name_index = 0
+    for cluster_key in final_clusters:
+        cluster_mols = final_clusters[cluster_key]
+        cluster_mols = [mols[i] for i in cluster_mols]
+
+        nRows = len(cluster_mols) // molsPerRow
+        if len(cluster_mols) % molsPerRow:
+            nRows += 1
+        fullSize = (molsPerRow * subImgSize[0], nRows * subImgSize[1])
+        d2d = rdMolDraw2D.MolDraw2DCairo(fullSize[0],fullSize[1], subImgSize[0], subImgSize[1])
+        d2d.drawOptions().legendFontSize=100
+        #d2d.drawOptions().useBWAtomPalette()
+        d2d.DrawMolecules(cluster_mols,legends=[mol.GetProp('legend') for mol in cluster_mols])
+        d2d.FinishDrawing()
+        new_name = folder + str(name_index) + '_' + name
+        open(new_name,'wb+').write(d2d.GetDrawingText())
+        name_index = name_index + 1
+    df['cluster'] = [str(i) for i in raw_cluster_labels] # so it gets interpreted by plotly in a good way
+    return(df, mols)
+
+def determine_optimal_clustering_number(df, max_num_clusters, smiles_col):
+
+    df['row_num'] = list(range(len(df)))
+    df = df.drop_duplicates(subset=smiles_col)
+    smis = list(df[smiles_col])
+    mols = [Chem.MolFromSmiles(mol) for mol in smis]
+    murcks = [MurckoScaffold.GetScaffoldForMol(mol) for mol in mols]
+    fps = [AllChem.GetMorganFingerprintAsBitVect(x,2,1024) for x in murcks]
+    
+    max_dists = []
+    avg_dists = []
+    print(max_num_clusters)
+    for number_of_clusters in range(1, max_num_clusters):
+        raw_cluster_labels, final_clusters=clusterFps(fps,num_clusters=number_of_clusters)
+        max_dist = []
+        avg_dist = []
+        for cluster_key in final_clusters:
+            cluster_mols = final_clusters[cluster_key]
+            cluster_mols = [mols[i] for i in cluster_mols]
+            
+            # get similarities
+            #cluster_murcks = [MurckoScaffold.GetScaffoldForMol(mol) for mol in cluster_mols]
+            cluster_fps = [AllChem.GetMorganFingerprintAsBitVect(x,2,1024) for x in cluster_mols]
+            tan_array = [DataStructs.BulkTanimotoSimilarity(i, cluster_fps) for i in cluster_fps]
+            flattened_tan_array = [item for sublist in tan_array for item in sublist]
+            avg_dist.append(np.mean(flattened_tan_array))
+            max_dist.append(np.min(flattened_tan_array))
+        max_dists.append(np.average(max_dist))
+        avg_dists.append(np.average(avg_dist))
+    plt.scatter(list(range(1,max_num_clusters)), max_dists)
+    plt.xlabel('Number of Clusters')
+    plt.ylabel('Average of Minimum Similarity Within Cluster')
+    plt.show()
+    plt.scatter(list(range(1,max_num_clusters)), avg_dists)
+    plt.xlabel('Number of Clusters')
+    plt.ylabel('Average of Mean Similarity Within Cluster')
+    plt.show()
+
+    return(df, max_dists)
+        
