@@ -9,6 +9,7 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 * 04 - shallow model training - RFC, SVM, FFN on pk+37k
 * 04 - model training: GNN for PK
 * 04 - model training - GNN for pk+37K, +1st round, +3 rounds (all bayHO)
+* 04 - chemberta code
 * 06 - using models for prediction
 * 06 - curating predictions for 800k, molport
 * 07 - substruct interpretation
@@ -16,8 +17,4 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 
 # IN PROGRESS
 * 04 - attentiveFP model custom GNN code
-* 04 - clean up chemberta code
-
-# TODO
-
 * 05 - model comparison plot
