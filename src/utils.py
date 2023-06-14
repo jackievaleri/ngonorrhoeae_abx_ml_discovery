@@ -261,7 +261,7 @@ def print_drug_dict(drugdict, smiles_list, col_list, names_list, merging_df, lef
     return(ret)
 
 # for every molecule, get similarity to closest antibiotic
-def get_lowest_tanimoto_from_drug_set(new_set, abx_fps, smiles_list, col_list, merging_df, names_list = None):
+def get_lowest_tanimoto_from_drug_set(new_set, abx_fps, smiles_list, col_list, merging_df, names_list = None, smiles_col='SMILES'):
     mols = [Chem.MolFromSmiles(x) for x in new_set]
     
     best_similarity = {}
@@ -287,7 +287,7 @@ def get_lowest_tanimoto_from_drug_set(new_set, abx_fps, smiles_list, col_list, m
         
         index = index + 1
     # kind of convoluted b/c I like seeing the actual pandas df and it's helpful to keep track of names, smiles, and values
-    ret = print_drug_dict(best_similarity, smiles_list, col_list, names_list, merging_df)
+    ret = print_drug_dict(best_similarity, smiles_list, col_list, names_list, merging_df, right_smiles = smiles_col)
     return(ret)
 
 # unfortunately sometimes SMILES can be NaN, or create invalid molecules, or fingerprints cannot be created from mols - 
@@ -313,20 +313,20 @@ def clean_up_names_and_smiles(df, name_col = 'Name', smiles_col = 'SMILES'):
             continue
     return(new_mols, new_smis, new_names)
 
-def compute_tanimoto_against_abx(smis, merging_df):
+def compute_tanimoto_against_abx(smis, merging_df, smiles_col='SMILES'):
     df = pd.read_csv('../data/04052022_CLEANED_v5_antibiotics_across_many_classes.csv')
     clean_mols, clean_smis, clean_names = clean_up_names_and_smiles(df, name_col = 'Name', smiles_col = 'Smiles')
     col_list = ['SMILES', 'tanimoto similarity to closest abx', 'closest abx smiles', 'closest abx name']
-    gen_mols = get_lowest_tanimoto_from_drug_set(smis, clean_mols, clean_smis, col_list, merging_df, clean_names)
+    gen_mols = get_lowest_tanimoto_from_drug_set(smis, clean_mols, clean_smis, col_list, merging_df, clean_names, smiles_col=smiles_col)
     return(gen_mols)
 
-def compute_tanimoto_against_training_set(smis, merging_df, train_set_path, hit_col = 'hit', just_hits = False):
+def compute_tanimoto_against_training_set(smis, merging_df, train_set_path, hit_col = 'hit', just_hits = False, smiles_col='SMILES'):
     df = pd.read_csv(train_set_path)
     if just_hits:
         df = df[df[hit_col] == 1]
     clean_mols, clean_smis, clean_names = clean_up_names_and_smiles(df, name_col = 'Name', smiles_col = 'SMILES')
     col_list = ['SMILES', 'tanimoto similarity to closest train set', 'closest train set smiles', 'closest train set name']
-    gen_mols = get_lowest_tanimoto_from_drug_set(smis, clean_mols, clean_smis, col_list, merging_df, clean_names)
+    gen_mols = get_lowest_tanimoto_from_drug_set(smis, clean_mols, clean_smis, col_list, merging_df, clean_names, smiles_col=smiles_col)
     return(gen_mols)
 
 def evaluate_similarities(df, smiles_col, path, train_set_path, thresh_name = '04', hit_col = 'hit', just_hits = False):
@@ -341,11 +341,11 @@ def evaluate_similarities(df, smiles_col, path, train_set_path, thresh_name = '0
     
     print("Computing tanimoto scores against abx...")
     smis = list(df[smiles_col])
-    df = compute_tanimoto_against_abx(smis, df)
+    df = compute_tanimoto_against_abx(smis, df, smiles_col=smiles_col)
     plot_tanimoto_score_plot(df, 'tanimoto similarity to closest abx', path, 'inh' + thresh_name + '_tan_to_closest_abx')
     
     print("Computing tanimoto scores against training set...")
-    df = compute_tanimoto_against_training_set(smis, df, train_set_path = train_set_path, hit_col = hit_col, just_hits = just_hits)
+    df = compute_tanimoto_against_training_set(smis, df, train_set_path = train_set_path, hit_col = hit_col, just_hits = just_hits, smiles_col=smiles_col)
     plot_tanimoto_score_plot(df, 'tanimoto similarity to closest train set', path, 'inh' + thresh_name + '_tan_to_closest_train_set')
     return(df)
 
