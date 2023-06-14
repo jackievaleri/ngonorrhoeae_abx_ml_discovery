@@ -1,7 +1,7 @@
 # N. gonorrhoeae Antibiotics Discovery
 Discovery of antibiotics active against N. gonorrhoeae using experimental and machine learning screening
 
-# DONE
+# Sections
 * 01 - biochem comparison of PK hits + non-hits; biochem comparison of 37K+PK hits + non-hits; biochem comparison of model incorrect predictions
 * 02 - tSNE of 37K, abx, PK; tSNE of hits, nonhits, abx
 * 03 - data prep for ml: pk, pk+37k, pk+37k+val
@@ -11,11 +11,8 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 * 04 - model training - GNN for pk+37K, +1st round, +3 rounds (all bayHO)
 * 04 - chemberta code
 * 04 - attentiveFP model custom GNN code
+* 05 - model comparison plot
 * 06 - using models for prediction
 * 06 - curating predictions for 800k, molport
 * 07 - substruct interpretation
 * 08 - negative dataset test
-
-# IN PROGRESS
-
-* 05 - model comparison plot
