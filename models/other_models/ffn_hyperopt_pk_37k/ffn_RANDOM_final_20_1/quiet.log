@@ -1,0 +1,13 @@
+Fold 0
+Model 0 best validation prc-auc = 0.549486 on epoch 7
+Model 0 test prc-auc = 0.522019
+Model 0 test auc = 0.899523
+Ensemble test prc-auc = 0.522019
+Ensemble test auc = 0.899523
+Fold 1
+Model 0 best validation prc-auc = 0.419047 on epoch 12
+Model 0 test prc-auc = 0.539254
+Model 0 test auc = 0.839913
+Ensemble test prc-auc = 0.539254
+Ensemble test auc = 0.839913
+Fold 2
