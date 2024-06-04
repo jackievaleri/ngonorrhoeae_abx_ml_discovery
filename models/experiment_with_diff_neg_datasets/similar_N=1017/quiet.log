@@ -1,0 +1,59 @@
+Fold 0
+Model 0 best validation prc-auc = 0.925146 on epoch 29
+Model 0 test prc-auc = 0.891291
+Model 0 test auc = 0.860824
+Model 1 best validation prc-auc = 0.925108 on epoch 29
+Model 1 test prc-auc = 0.901068
+Model 1 test auc = 0.871064
+Ensemble test prc-auc = 0.896537
+Ensemble test auc = 0.866271
+Fold 1
+Model 0 best validation prc-auc = 0.877062 on epoch 0
+Model 0 test prc-auc = 0.851660
+Model 0 test auc = 0.855917
+Model 1 best validation prc-auc = 0.889336 on epoch 0
+Model 1 test prc-auc = 0.840818
+Model 1 test auc = 0.839173
+Ensemble test prc-auc = 0.844795
+Ensemble test auc = 0.843618
+Fold 2
+Model 0 best validation prc-auc = 0.907591 on epoch 27
+Model 0 test prc-auc = 0.874418
+Model 0 test auc = 0.915032
+Model 1 best validation prc-auc = 0.907315 on epoch 27
+Model 1 test prc-auc = 0.884912
+Model 1 test auc = 0.919723
+Ensemble test prc-auc = 0.880456
+Ensemble test auc = 0.917377
+Fold 3
+Model 0 best validation prc-auc = 0.880831 on epoch 23
+Model 0 test prc-auc = 0.963283
+Model 0 test auc = 0.950169
+Model 1 best validation prc-auc = 0.883557 on epoch 28
+Model 1 test prc-auc = 0.966373
+Model 1 test auc = 0.949686
+Ensemble test prc-auc = 0.965786
+Ensemble test auc = 0.951328
+Fold 4
+Model 0 best validation prc-auc = 0.755085 on epoch 25
+Model 0 test prc-auc = 0.973099
+Model 0 test auc = 0.958633
+Model 1 best validation prc-auc = 0.770440 on epoch 27
+Model 1 test prc-auc = 0.973196
+Model 1 test auc = 0.957620
+Ensemble test prc-auc = 0.973031
+Ensemble test auc = 0.958430
+5-fold cross validation
+	Seed 0 ==> test prc-auc = 0.896537
+	Seed 0 ==> test auc = 0.866271
+	Seed 1 ==> test prc-auc = 0.844795
+	Seed 1 ==> test auc = 0.843618
+	Seed 2 ==> test prc-auc = 0.880456
+	Seed 2 ==> test auc = 0.917377
+	Seed 3 ==> test prc-auc = 0.965786
+	Seed 3 ==> test auc = 0.951328
+	Seed 4 ==> test prc-auc = 0.973031
+	Seed 4 ==> test auc = 0.958430
+Overall test prc-auc = 0.912121 +/- 0.049736
+Overall test auc = 0.907405 +/- 0.045592
+Elapsed time = 0:22:53
