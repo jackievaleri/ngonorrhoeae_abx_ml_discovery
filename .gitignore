@@ -11,6 +11,7 @@ chemprop_master/
 *.its-gpu-time-4
 *.its-gpu-time-4-copy2
 *.fingers-crossed-3
+*.deep-learning-new
 data/library_info/PublicStructures.txt
 src/.ipynb_checkpoints/02_make_tsne_plots_different_libraries-checkpoint.ipynb
 src/.ipynb_checkpoints/01_analyze_biochem_differences_between_screen_hits_and_nonhits-checkpoint.ipynb
