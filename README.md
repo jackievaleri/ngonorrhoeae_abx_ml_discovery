@@ -23,4 +23,4 @@ This notebook demonstrates how to use the trained models to make predictions on 
 In this notebook, we interpret the substructures of the chemical compounds that contribute to the predictions made by our models. Understanding these substructures helps in identifying key features that influence model decisions and provides insights into the underlying biochemical mechanisms.
 
 ## 08 - Negative Dataset Test
-This notebook involves testing the models on a negative dataset to evaluate their performance and robustness. The negative dataset contains compounds that are known to be inactive, and testing on this dataset helps in assessing the specificity and accuracy of our models in distinguishing between active and inactive compounds.
+This notebook involves testing the models on a negative dataset to evaluate their performance and robustness.
