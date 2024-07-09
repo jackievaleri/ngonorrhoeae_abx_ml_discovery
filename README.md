@@ -1,7 +1,7 @@
 # N. gonorrhoeae Antibiotics Discovery
 Discovery of antibiotics active against N. gonorrhoeae using experimental and machine learning screening. Below is a description of Jupyter notebooks found in this repository.
 
-## 01 - Biochemical Comparisons
+## 01 - Experimental Data Exploration
 This notebook compares experimental hits with non-hits to explore available data and identify key biochemical differences. Additionally, we compare a combined dataset of tens of thousands of small molecules to further explore high-throughput screening data. We also analyze the incorrect predictions made by our model to gain insights into potential areas for improvement.
 
 ## 02 - t-SNE Analysis
