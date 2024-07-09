@@ -2,7 +2,7 @@
 Discovery of antibiotics active against N. gonorrhoeae using experimental and machine learning screening. Below is a description of Jupyter notebooks found in this repository.
 
 ## 01 - Biochemical Comparisons
-This notebook compares experimental hits with non-hits to identify key biochemical differences. Additionally, we compare a combined dataset of tens of thousands of small molecules to further explore these distinctions. Finally, we analyze the biochemical characteristics of the incorrect predictions made by our model to gain insights into potential areas for improvement.
+This notebook compares experimental hits with non-hits to explore available data and identify key biochemical differences. Additionally, we compare a combined dataset of tens of thousands of small molecules to further explore high-throughput screening data. We also analyze the incorrect predictions made by our model to gain insights into potential areas for improvement.
 
 ## 02 - t-SNE Analysis
 This notebook uses t-distributed stochastic neighbor embedding (t-SNE) to visualize high-dimensional data in a lower-dimensional space. We perform t-SNE analysis on a dataset of training data and known antibiotics, considering both hits and non-hits, to understand the chemical space.
