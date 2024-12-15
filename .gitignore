@@ -33,3 +33,6 @@ out/predictions_from_models/pk_37k_1round_model/5m/clean_preds_11_22_2022.csv
 models/pk_37k_three_rounds_val_models_03312023/FINALbayHO04112023.zip
 out/predictions_from_models/pk_37k_3roundsval_model/enamine_REAL_diversity/clean_preds_06_12_2023.csv
 out/predictions_from_models/pk_37k_3roundsval_model/enamine_REAL_diversity/melis_enamine_REAL_diversity_full_43M_with_bayHOv303312023_06_12_2023.csv
+.DS_Store
+figure_panels/.DS_Store
+models/.DS_Store
