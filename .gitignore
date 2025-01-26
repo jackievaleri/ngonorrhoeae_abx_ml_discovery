@@ -36,3 +36,4 @@ out/predictions_from_models/pk_37k_3roundsval_model/enamine_REAL_diversity/melis
 .DS_Store
 figure_panels/.DS_Store
 models/.DS_Store
+data/library_info/250k_rndm_zinc_drugs_clean_sorted copy.txt
