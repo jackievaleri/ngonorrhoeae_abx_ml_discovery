@@ -11,15 +11,53 @@ from sklearn.cluster import AgglomerativeClustering
 from adme_pred import ADME # pip install ADME_predict is NOT the right one
 
 # SECTION 1: MOLECULAR FILTERS
+
+nitrofuran = 'O=[N+](O)c1ccco1'
+nitro_mol = Chem.MolFromSmiles(nitrofuran)
+
+sulfonamide = 'NS(=O)=O'
+sulfa_mol = Chem.MolFromSmiles(sulfonamide)
+
+quinolone = 'O=c1cc[nH]c2ccccc12'
+quino_mol = Chem.MolFromSmiles(quinolone)
+
 def filter_for_logp_less_than(df, mols, thresh = 5):
+    """
+    Filters molecules based on LogP values being below a specified threshold.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing molecular information.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+    thresh (float, optional): Maximum LogP value allowed. Default is 5.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame with molecules passing the LogP filter.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
     keep_indices = [Descriptors.MolLogP(mol) < thresh for mol in mols]
     df = df[keep_indices]
     print('length of df with logP < ' + str(thresh) + ': ', len(df))
-    mols = [m for i,m in enumerate(mols) if keep_indices[i]]
+    mols = [m for i, m in enumerate(mols) if keep_indices[i]]
     return(df, mols)
 
+
 def check_pains_brenk(df, mols, method = 'both', thresh = 0):
-    # initialize filter
+    """
+    Filters molecules based on PAINS and/or Brenk structural alerts.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing molecular information.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+    method (str, optional): Filter method. Options are 'pains', 'brenk', or 'both'. Default is 'both'.
+    thresh (int, optional): Maximum number of allowed matches before exclusion. Default is 0.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame with molecules that passed the structural alert filter.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
+    # initialize filters
     params = FilterCatalogParams()
     if method == 'both' or method == 'pains':
         params.AddCatalog(FilterCatalogParams.FilterCatalogs.PAINS)
@@ -40,16 +78,18 @@ def check_pains_brenk(df, mols, method = 'both', thresh = 0):
     print('length of all preds with clean (no PAINS or Brenk) mols: ', len(df))
     return(df, mols)
 
-nitrofuran = 'O=[N+](O)c1ccco1'
-nitro_mol = Chem.MolFromSmiles(nitrofuran)
-
-sulfonamide = 'NS(=O)=O'
-sulfa_mol = Chem.MolFromSmiles(sulfonamide)
-
-quinolone = 'O=c1cc[nH]c2ccccc12'
-quino_mol = Chem.MolFromSmiles(quinolone)
 
 def is_pattern(mol, pattern_mol):
+    """
+    Checks if a molecule contains a complete structural pattern (fragment match).
+
+    Parameters:
+    mol (RDKit Mol): The molecule to test.
+    pattern_mol (RDKit Mol): The structural fragment to search for.
+
+    Returns:
+    bool: True if the molecule fully matches the pattern, False otherwise.
+    """
     if mol is None:
         return(False)
     num_atoms_frag = pattern_mol.GetNumAtoms()
@@ -63,7 +103,20 @@ def is_pattern(mol, pattern_mol):
     else:
         return(False)
 
+
 def filter_for_nitrofuran(df, mols):
+    """
+    Removes molecules containing nitrofuran substructures.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing molecular information.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame without nitrofuran-containing molecules.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
     keep_indices = [not is_pattern(mol, nitro_mol) for mol in mols]
     df = df[keep_indices]
     print('length of df with no nitrofurans: ', len(df))
@@ -71,27 +124,82 @@ def filter_for_nitrofuran(df, mols):
     return(df, mols)   
     
 def filter_for_sulfonamide(df, mols):
+    """
+    Removes molecules containing sulfonamide substructures.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing molecular information.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame without sulfonamide-containing molecules.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
     keep_indices = [not is_pattern(mol, sulfa_mol) for mol in mols]
     df = df[keep_indices]
     print('length of df with no sulfonamides: ', len(df))
     mols = [m for i,m in enumerate(mols) if keep_indices[i]]
     return(df, mols)
 
+
 def filter_for_quinolone(df, mols):
+    """
+    Removes molecules containing quinolone motifs.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing molecular information.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame without quinolone-containing molecules.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
     keep_indices = [not is_pattern(mol, quino_mol) for mol in mols]
     df = df[keep_indices]
     print('length of df with no quinolones: ', len(df))
     mols = [m for i,m in enumerate(mols) if keep_indices[i]]
     return(df, mols)  
 
+
 def filter_for_mw_bounds(df, mols, lower_bound = 100, upper_bound = 600):
+    """
+    Filters molecules based on molecular weight (MW) within specified bounds.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing molecular information.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+    lower_bound (float, optional): Minimum molecular weight allowed. Default is 100.
+    upper_bound (float, optional): Maximum molecular weight allowed. Default is 600.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame with molecules in the specified MW range.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
     keep_indices = [Descriptors.MolWt(mol) <= upper_bound and Descriptors.MolWt(mol) >= lower_bound for mol in mols]
     df = df[keep_indices]
     print('length of df with ' + str(lower_bound) + ' < MW < ' + str(upper_bound) + ': ', len(df))
     mols = [m for i,m in enumerate(mols) if keep_indices[i]]
     return(df, mols)
 
+
 def filter_for_rotatable_bonds(df, mols, smiles_column, thresh = 5):
+    """
+    Filters molecules based on the number of rotatable bonds.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing SMILES strings.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+    smiles_column (str): Column name in the DataFrame that contains SMILES strings.
+    thresh (int, optional): Maximum number of rotatable bonds allowed. Default is 5.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame with molecules below the rotatable bond threshold.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
     smis = list(df[smiles_column])
     bonds = [ADME(smi)._n_rot_bonds() for smi in smis]
     keep_indices = [bond < thresh for bond in bonds]
@@ -100,7 +208,20 @@ def filter_for_rotatable_bonds(df, mols, smiles_column, thresh = 5):
     mols = [m for i,m in enumerate(mols) if keep_indices[i]]
     return(df, mols)
 
+
 def keep_valid_molecules(df, smiles_column):
+    """
+    Keeps only valid molecules that can be parsed from SMILES strings.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing SMILES strings.
+    smiles_column (str): Column name in the DataFrame containing SMILES.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Filtered DataFrame with valid SMILES.
+        - list: List of RDKit Mol objects corresponding to the filtered DataFrame.
+    """
     smis = list(df[smiles_column])
     mols = [Chem.MolFromSmiles(smi) for smi in smis]
     keep_indices = [m is not None for m in mols]
@@ -112,8 +233,18 @@ def keep_valid_molecules(df, smiles_column):
         m.SetProp('SMILES', smi)
     return(df, mols)
 
+
 def deduplicate_on_tan_sim(df, mols):
-    # deduplicate based on tanimoto similarity
+    """
+    Deduplicates molecules based on Tanimoto similarity of fingerprints.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing molecular information.
+    mols (list): List of RDKit Mol objects corresponding to the DataFrame rows.
+
+    Returns:
+    pd.DataFrame: DataFrame with duplicate molecules (Tanimoto similarity = 1) removed.
+    """
     fps = [Chem.RDKFingerprint(m) for m in mols]
     keep_indices = [True] * len(fps)
     for i, f1 in enumerate(fps):
@@ -128,6 +259,7 @@ def deduplicate_on_tan_sim(df, mols):
     df = df[keep_indices]
     print('length of all preds deduplicated: ', len(df))
     return(df)
+
 
 # SECTION 2: PROCESSING FUNCTIONS
 def rank_order_preds(smis, scos, path):
