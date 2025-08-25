@@ -67,6 +67,17 @@ def check_pains_brenk(df, mols, method="both", thresh=0):
     catalog = FilterCatalog(params)
 
     def search_for_pains_or_brenk(mol):
+        """
+        Checks whether a molecule passes the PAINS/Brenk structural alert filter.
+
+        Parameters:
+        mol (RDKit Mol): The molecule to evaluate.
+
+        Returns:
+        bool: 
+            - True if the molecule has no PAINS/Brenk matches or matches fewer than or equal to the threshold.
+            - False if the molecule exceeds the threshold of PAINS/Brenk matches.
+        """
         entry = catalog.GetMatches(mol)  # Get all matching PAINS or Brenk
         if entry is None:
             return True
