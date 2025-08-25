@@ -376,7 +376,7 @@ def compute_highest_tan_sim_intraset(smis):
     Returns:
     list: List of maximum intra-set Tanimoto similarities (floats).
     """
-    smis = [smi for smi in smis if type(smi) != float]
+    smis = [smi for smi in smis if not isinstance(smi, float)]
     mols = [Chem.MolFromSmiles(x) for x in smis]
     fps = [Chem.RDKFingerprint(x) if x is not None else "" for x in mols]
     tans = get_closest_tanimoto_from_drug_set(smis, fps)
@@ -517,7 +517,7 @@ def print_drug_dict(
     for key, item in drugdict.items():
         tans, indexes = item
         for tan, index in zip(tans, indexes):
-            if names_list == None:
+            if names_list is None:
                 ret = pd.concat(
                     [
                         ret,
@@ -554,7 +554,8 @@ def get_lowest_tanimoto_from_drug_set(
     Computes closest Tanimoto similarity between a new set of molecules and another set of molecules.
 
     For every molecule, get similarity to closest antibiotic or molecule in another dataset.
-    The default is assumed to be that we are comparing to a list of antibiotics, but this can be used for any set of molecules.
+    The default is assumed to be that we are comparing to a list of antibiotics,
+    but this can be used for any set of molecules.
 
     Parameters:
     new_set (list): List of SMILES strings to compare.
@@ -625,7 +626,7 @@ def clean_up_names_and_smiles(df, name_col="Name", smiles_col="SMILES"):
         - list: List of valid SMILES strings.
         - list: List of corresponding molecule names.
     """
-    not_nans = [type(smi) != float for smi in list(df[smiles_col])]
+    not_nans = [not isinstance(smi, float) for smi in df[smiles_col]]
     df = df[not_nans]
 
     smiles = list(df[smiles_col])
