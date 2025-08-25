@@ -272,7 +272,23 @@ def deduplicate_on_tan_sim(df, mols):
 
 
 # SECTION 2: PROCESSING FUNCTIONS
+
+
 def rank_order_preds(smis, scos, path):
+    """
+    Ranks molecules by their prediction scores and plots score vs. rank.
+
+    Parameters:
+    smis (list): List of SMILES strings.
+    scos (list): List of scores corresponding to the SMILES.
+    path (str): Directory path where the rank plot (SVG) will be saved.
+
+    Returns:
+    pd.DataFrame: DataFrame with columns:
+        - 'smiles': SMILES strings.
+        - 'scores': Prediction scores (floats).
+        - 'rank': Rank of each molecule based on score.
+    """
     new_scos = []
     new_smis = []
     for smi, sco in zip(smis, scos):
@@ -298,9 +314,21 @@ def rank_order_preds(smis, scos, path):
     return df
 
 
-# for every molecule, get similarity to closest drug in a set of drug fps
-# this is simpler than the later tan sim code because there is no need to save the specific drug name/SMILES here
 def get_closest_tanimoto_from_drug_set(new_set, drug_fps):
+    """
+    Computes the closest Tanimoto similarity between a set of molecules and a reference drug set.
+
+    For every molecule, get similarity to closest drug in a set of drug fingerprints.
+    This is simpler than other TS code because there is no need to save the specific drug name/SMILES here.
+
+    Parameters:
+    new_set (list): List of SMILES strings to evaluate.
+    drug_fps (list): List of RDKit fingerprint objects for the reference drug set.
+
+    Returns:
+    list: List of maximum Tanimoto similarities (floats) for each molecule in new_set.
+          Returns 'NaN' for invalid SMILES or failed fingerprint generation.
+    """
     # new_set is list of smiles
     # drug_fps is list of fingerprints of things you want to compare to
     try:
@@ -339,6 +367,15 @@ def get_closest_tanimoto_from_drug_set(new_set, drug_fps):
 
 
 def compute_highest_tan_sim_intraset(smis):
+    """
+    Computes the highest Tanimoto similarity of each molecule against others in the same set.
+
+    Parameters:
+    smis (list): List of SMILES strings.
+
+    Returns:
+    list: List of maximum intra-set Tanimoto similarities (floats).
+    """
     smis = [smi for smi in smis if type(smi) != float]
     mols = [Chem.MolFromSmiles(x) for x in smis]
     fps = [Chem.RDKFingerprint(x) if x is not None else "" for x in mols]
@@ -347,6 +384,18 @@ def compute_highest_tan_sim_intraset(smis):
 
 
 def plot_tan_wrt_rank(df, path, score_col="scores", tan_col="tan"):
+    """
+    Generates a scatter plot of Tanimoto similarity versus rank.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing scores and Tanimoto similarities.
+    path (str): Directory path where the plot will be saved.
+    score_col (str, optional): Column name containing scores. Default is 'scores'.
+    tan_col (str, optional): Column name containing Tanimoto similarities. Default is 'tan'.
+
+    Returns:
+    None: Saves the scatter plot as an SVG file and displays it.
+    """
     df = df.sort_values(by=score_col, ascending=False)
 
     fig, ax = plt.subplots(figsize=(3, 2), dpi=300)
@@ -362,6 +411,18 @@ def plot_tan_wrt_rank(df, path, score_col="scores", tan_col="tan"):
 
 
 def plot_tan_wrt_score(df, path, score_col="scores", tan_col="tan"):
+    """
+    Generates a scatter plot of Tanimoto similarity versus score.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing scores and Tanimoto similarities.
+    path (str): Directory path where the plot will be saved.
+    score_col (str, optional): Column name containing scores. Default is 'scores'.
+    tan_col (str, optional): Column name containing Tanimoto similarities. Default is 'tan'.
+
+    Returns:
+    None: Saves the scatter plot as an SVG file and displays it.
+    """
     fig, ax = plt.subplots(figsize=(3, 2), dpi=300)
     plt.scatter(df[score_col], df[tan_col], s=0.5, color="slategrey")
     plt.xlabel("Score")
@@ -374,6 +435,18 @@ def plot_tan_wrt_score(df, path, score_col="scores", tan_col="tan"):
 
 
 def process_preds(df, smiles_col, hit_col, path):
+    """
+    Processes prediction results by ranking, computing Tanimoto similarities, and plotting.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing SMILES and hit scores.
+    smiles_col (str): Column name containing SMILES strings.
+    hit_col (str): Column name containing prediction scores.
+    path (str): Directory path where plots will be saved.
+
+    Returns:
+    None: Generates ranked DataFrame and plots for score vs. rank and Tanimoto similarity.
+    """
     smis = list(df[smiles_col])
     scos = list(df[hit_col])
 
@@ -395,6 +468,16 @@ def process_preds(df, smiles_col, hit_col, path):
 
 
 def evaluate_scores(df, hit_col):
+    """
+    Evaluates prediction scores by converting them to floats and reporting distribution.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing prediction scores.
+    hit_col (str): Column name containing prediction scores.
+
+    Returns:
+    pd.DataFrame: DataFrame with scores converted to float and descriptive counts printed.
+    """
     df[hit_col] = [float(x) for x in df[hit_col]]
     print("Total number in df: ", len(df))
 
@@ -403,7 +486,6 @@ def evaluate_scores(df, hit_col):
     return df
 
 
-# some hardcoded stuff in here - not ideal
 def print_drug_dict(
     drugdict,
     smiles_list,
@@ -413,6 +495,23 @@ def print_drug_dict(
     left_smiles="SMILES",
     right_smiles="SMILES",
 ):
+    """
+    Builds a DataFrame summarizing drug similarity results from a dictionary.
+
+    There is some hardcoded stuff in here, which is not ideal.
+
+    Parameters:
+    drugdict (dict): Dictionary with SMILES as keys and similarity/index lists as values.
+    smiles_list (list): List of SMILES strings corresponding to the drug set.
+    col_list (list): List of column names for the resulting DataFrame.
+    names_list (list or None): List of drug names corresponding to the SMILES. If None, names are omitted.
+    merging_df (pd.DataFrame): DataFrame to merge similarity results with.
+    left_smiles (str, optional): Column in results for left merge. Default is 'SMILES'.
+    right_smiles (str, optional): Column in merging_df for right merge. Default is 'SMILES'.
+
+    Returns:
+    pd.DataFrame: DataFrame with similarity results merged with metadata.
+    """
 
     ret = pd.DataFrame(columns=col_list)
     for key, item in drugdict.items():
@@ -442,7 +541,6 @@ def print_drug_dict(
     return ret
 
 
-# for every molecule, get similarity to closest antibiotic
 def get_lowest_tanimoto_from_drug_set(
     new_set,
     abx_fps,
@@ -452,6 +550,24 @@ def get_lowest_tanimoto_from_drug_set(
     names_list=None,
     smiles_col="SMILES",
 ):
+    """
+    Computes closest Tanimoto similarity between a new set of molecules and another set of molecules.
+
+    For every molecule, get similarity to closest antibiotic or molecule in another dataset.
+    The default is assumed to be that we are comparing to a list of antibiotics, but this can be used for any set of molecules.
+
+    Parameters:
+    new_set (list): List of SMILES strings to compare.
+    abx_fps (list): List of RDKit fingerprint objects for the antibiotic set.
+    smiles_list (list): List of antibiotic SMILES strings.
+    col_list (list): Column names for the output DataFrame.
+    merging_df (pd.DataFrame): DataFrame to merge results into.
+    names_list (list, optional): List of antibiotic names. Default is None.
+    smiles_col (str, optional): Column in merging_df containing SMILES. Default is 'SMILES'.
+
+    Returns:
+    pd.DataFrame: DataFrame containing each SMILES, similarity to closest antibiotic, and metadata.
+    """
     mols = [Chem.MolFromSmiles(x) for x in new_set]
 
     best_similarity = {}
@@ -491,8 +607,24 @@ def get_lowest_tanimoto_from_drug_set(
     return ret
 
 
-# unfortunately sometimes SMILES can be NaN, or create invalid molecules, or fingerprints cannot be created from mols -
 def clean_up_names_and_smiles(df, name_col="Name", smiles_col="SMILES"):
+    """
+    Cleans up a DataFrame by removing invalid SMILES and molecules that cannot generate fingerprints.
+
+    Unfortunately, sometimes SMILES can be NaN, or create invalid molecules,
+    or fingerprints cannot be created from mols.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing SMILES and names.
+    name_col (str, optional): Column containing molecule names. Default is 'Name'.
+    smiles_col (str, optional): Column containing SMILES strings. Default is 'SMILES'.
+
+    Returns:
+    tuple: A tuple containing:
+        - list: List of RDKit fingerprint objects.
+        - list: List of valid SMILES strings.
+        - list: List of corresponding molecule names.
+    """
     not_nans = [type(smi) != float for smi in list(df[smiles_col])]
     df = df[not_nans]
 
@@ -516,6 +648,17 @@ def clean_up_names_and_smiles(df, name_col="Name", smiles_col="SMILES"):
 
 
 def compute_tanimoto_against_abx(smis, merging_df, smiles_col="SMILES"):
+    """
+    Computes Tanimoto similarity of molecules against a curated antibiotic set.
+
+    Parameters:
+    smis (list): List of SMILES strings to evaluate.
+    merging_df (pd.DataFrame): DataFrame to merge results with.
+    smiles_col (str, optional): Column name in merging_df containing SMILES. Default is 'SMILES'.
+
+    Returns:
+    pd.DataFrame: DataFrame with Tanimoto similarities to closest antibiotics and metadata.
+    """
     df = pd.read_csv("../data/04052022_CLEANED_v5_antibiotics_across_many_classes.csv")
     clean_mols, clean_smis, clean_names = clean_up_names_and_smiles(
         df, name_col="Name", smiles_col="Smiles"
@@ -546,6 +689,20 @@ def compute_tanimoto_against_training_set(
     just_hits=False,
     smiles_col="SMILES",
 ):
+    """
+    Computes Tanimoto similarity of molecules against a training set.
+
+    Parameters:
+    smis (list): List of SMILES strings to evaluate.
+    merging_df (pd.DataFrame): DataFrame to merge results with.
+    train_set_path (str): Path to CSV file containing the training set.
+    hit_col (str, optional): Column in training set indicating hits. Default is 'hit'.
+    just_hits (bool, optional): If True, restricts training set to hits only. Default is False.
+    smiles_col (str, optional): Column name in merging_df containing SMILES. Default is 'SMILES'.
+
+    Returns:
+    pd.DataFrame: DataFrame with Tanimoto similarities to closest training set molecules.
+    """
     df = pd.read_csv(train_set_path)
     if just_hits:
         df = df[df[hit_col] == 1]
@@ -579,8 +736,35 @@ def evaluate_similarities(
     hit_col="hit",
     just_hits=False,
 ):
+    """
+    Evaluates molecule similarity against antibiotics and training sets, generating histograms.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing SMILES strings.
+    smiles_col (str): Column name containing SMILES.
+    path (str): Directory path where plots will be saved.
+    train_set_path (str): Path to CSV file containing the training set.
+    thresh_name (str, optional): Identifier for saving plots. Default is '04'.
+    hit_col (str, optional): Column in training set indicating hits. Default is 'hit'.
+    just_hits (bool, optional): If True, restricts training set to hits only. Default is False.
+
+    Returns:
+    pd.DataFrame: DataFrame with similarity scores against both antibiotic and training sets.
+    """
 
     def plot_tanimoto_score_plot(df, tanimoto_col, path, name):
+        """
+        Plots a histogram of Tanimoto similarity scores.
+
+        Parameters:
+        df (pd.DataFrame): DataFrame containing Tanimoto similarity values.
+        tanimoto_col (str): Column name in the DataFrame with Tanimoto similarities.
+        path (str): Directory path where the plot will be saved.
+        name (str): Identifier for the plot file name.
+
+        Returns:
+        None: Saves the histogram as a PNG file and displays it.
+        """
         plt.figure(figsize=(5, 3), dpi=300)
         plt.hist(df[tanimoto_col], bins=50, edgecolor="black", linewidth=0.5)
         plt.xlabel(tanimoto_col)
@@ -619,9 +803,21 @@ def evaluate_similarities(
 # SECTION 3: Clustering
 
 
-# code adapted from https://www.macinchem.org/reviews/clustering/clustering.php
 def clusterFps(fps, num_clusters):
+    """
+    Clusters molecular fingerprints using agglomerative clustering.
 
+    Code adapted from https://www.macinchem.org/reviews/clustering/clustering.php
+
+    Parameters:
+    fps (list): List of RDKit fingerprint objects.
+    num_clusters (int): Number of clusters to generate.
+
+    Returns:
+    tuple: A tuple containing:
+        - np.ndarray: Cluster labels for each molecule.
+        - dict: Dictionary mapping cluster IDs to lists of molecule indices.
+    """
     tan_array = [DataStructs.BulkTanimotoSimilarity(i, fps) for i in fps]
     tan_array = np.array(tan_array)
     clusterer = AgglomerativeClustering(
@@ -640,6 +836,21 @@ def clusterFps(fps, num_clusters):
 
 
 def make_legends(mols, smis, df, smiles_col, name_col, hit_col, tans):
+    """
+    Attaches legends to molecules for visualization, including similarity and score info.
+
+    Parameters:
+    mols (list): List of RDKit Mol objects.
+    smis (list): List of SMILES strings corresponding to the molecules.
+    df (pd.DataFrame): DataFrame containing metadata (names, scores, similarities).
+    smiles_col (str): Column containing SMILES strings.
+    name_col (str): Column containing molecule names.
+    hit_col (str): Column containing prediction scores.
+    tans (bool): Whether to include Tanimoto similarity values in legends.
+
+    Returns:
+    list: List of RDKit Mol objects with legend properties set.
+    """
     row_num = 0
     for _smi in smis:
         try:
@@ -697,6 +908,24 @@ def extract_legends_and_plot(
     hit_col="hit",
     tans=True,
 ):
+    """
+    Generates molecule cluster plots with legends using Murcko scaffolds and Tanimoto clustering.
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing SMILES and associated metadata.
+    name (str): Identifier for plot naming.
+    folder (str): Output folder for cluster images.
+    num_clusters (int, optional): Number of clusters to generate. Default is 30.
+    smiles_col (str, optional): Column containing SMILES strings. Default is 'smiles'.
+    name_col (str, optional): Column containing molecule names. Default is 'Name'.
+    hit_col (str, optional): Column containing prediction scores. Default is 'hit'.
+    tans (bool, optional): Whether to include Tanimoto similarity values in legends. Default is True.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Input DataFrame with cluster labels added.
+        - list: List of RDKit Mol objects with legend properties set.
+    """
     df["row_num"] = list(range(len(df)))
     df = df.drop_duplicates(subset=smiles_col)
     smis = list(df[smiles_col])
@@ -749,7 +978,19 @@ def extract_legends_and_plot(
 
 
 def determine_optimal_clustering_number(df, max_num_clusters, smiles_col):
+    """
+    Determines the optimal number of clusters by computing intra-cluster similarity metrics.
 
+    Parameters:
+    df (pd.DataFrame): DataFrame containing SMILES strings.
+    max_num_clusters (int): Maximum number of clusters to evaluate.
+    smiles_col (str): Column containing SMILES strings.
+
+    Returns:
+    tuple: A tuple containing:
+        - pd.DataFrame: Input DataFrame (with duplicates dropped).
+        - list: List of average minimum and mean Tanimoto similarities for different cluster counts.
+    """
     df["row_num"] = list(range(len(df)))
     df = df.drop_duplicates(subset=smiles_col)
     smis = list(df[smiles_col])

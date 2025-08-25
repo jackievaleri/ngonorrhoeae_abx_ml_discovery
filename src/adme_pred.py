@@ -7,9 +7,8 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 from rdkit import Chem
-from rdkit.Chem import Descriptors
-from rdkit.Chem import FilterCatalog
 from rdkit.Chem import rdqueries  # pylint: disable=unused-import
+from rdkit.Chem import Descriptors, FilterCatalog
 
 
 class ADME:

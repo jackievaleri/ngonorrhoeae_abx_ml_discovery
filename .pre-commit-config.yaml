@@ -1,3 +1,5 @@
+# To use, run: pre-commit run --files src/*
+
 exclude: chemprop-master
 repos:
   - repo: https://github.com/psf/black
