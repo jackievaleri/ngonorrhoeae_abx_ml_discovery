@@ -1,4 +1,4 @@
-cd ../chemprop-master/ 
+cd ../chemprop-master/
 
 export DATA_PATH=../data/data_prep_for_ml/data_prep_for_ml_pk_37k_screen/
 
