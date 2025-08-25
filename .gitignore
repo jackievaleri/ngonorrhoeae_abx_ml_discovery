@@ -13,8 +13,7 @@ chemprop_master/
 *.fingers-crossed-3
 *.deep-learning-new
 data/library_info/PublicStructures.txt
-src/.ipynb_checkpoints/02_make_tsne_plots_different_libraries-checkpoint.ipynb
-src/.ipynb_checkpoints/01_analyze_biochem_differences_between_screen_hits_and_nonhits-checkpoint.ipynb
+src/.ipynb_checkpoints/*
 src/__pycache__/adme_pred.cpython-310.pyc
 data/data_prep_for_ml/data_prep_for_ml_pk_37k_screen/FULL_03_19_2022_for_sklearn.csv
 data/data_prep_for_ml/data_prep_for_ml_pk_37k_screen/TRAIN_03_19_2022_for_sklearn.csv
