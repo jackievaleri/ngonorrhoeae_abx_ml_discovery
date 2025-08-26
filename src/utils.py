@@ -279,7 +279,6 @@ def deduplicate_on_tan_sim(df, mols):
 
 # SECTION 2: PROCESSING FUNCTIONS
 
-
 def rank_order_preds(smis, scos, path):
     """
     Ranks molecules by their prediction scores and plots score vs. rank.
@@ -938,7 +937,6 @@ def extract_legends_and_plot(
         fullSize = (molsPerRow * subImgSize[0], nRows * subImgSize[1])
         d2d = rdMolDraw2D.MolDraw2DCairo(fullSize[0], fullSize[1], subImgSize[0], subImgSize[1])
         d2d.drawOptions().legendFontSize = 100
-        # d2d.drawOptions().useBWAtomPalette()
         d2d.DrawMolecules(cluster_mols, legends=[mol.GetProp("legend") for mol in cluster_mols])
         d2d.FinishDrawing()
         new_name = folder + str(name_index) + "_" + name
