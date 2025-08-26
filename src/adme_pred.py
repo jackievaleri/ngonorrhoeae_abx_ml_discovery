@@ -1,3 +1,16 @@
+"""NOTE:
+
+This script is reproduced in full from:
+https://github.com/ikmckenz/adme-pred-py/blob/master/adme_pred/adme_pred.py
+
+I was having issues pip installing the package, so I decided to have a local copy of the script.
+
+Many thanks to Ian McKenzie (ikmckenz) for developing this script,
+even though we didn't end up using this analysis in the final manuscript.
+"""
+
+
+
 """This library supports computational drug discovery by implementing several
 druglikenss filters, medicinal chemistry filters, and provides an easy to use
 wrapping API for common cheminformatics calculations."""
@@ -7,9 +20,8 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 from rdkit import Chem
-from rdkit.Chem import Descriptors
-from rdkit.Chem import FilterCatalog
-from rdkit.Chem import rdqueries  # pylint: disable=unused-import
+from rdkit.Chem import rdqueries  # noqa: F401
+from rdkit.Chem import Descriptors, FilterCatalog
 
 
 class ADME:

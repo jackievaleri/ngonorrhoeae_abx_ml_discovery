@@ -1,4 +1,4 @@
-cd ../../chemprop/ 
+cd ../../chemprop/
 
 EXPORT MODEL_PATH=../ngonorrhoeae_abx_ml_discovery/models/other_models/
 EXPORT MODEL_NAME=rfc_final_122
