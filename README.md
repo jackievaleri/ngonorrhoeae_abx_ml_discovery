@@ -2,9 +2,11 @@
 
 Discovery of antibiotics active against N. gonorrhoeae using experimental and machine learning screening. Below is a description of Jupyter notebooks found in this repository.
 
-## 02 - t-SNE Analysis
+## 2A_2B_S1_tsne_plots_quantify_diversity.ipynb - t-SNE Analysis
 
 This notebook uses t-distributed stochastic neighbor embedding (t-SNE) to visualize high-dimensional data in a lower-dimensional space. We perform t-SNE analysis on a dataset of training data and known antibiotics, considering both hits and non-hits, to understand the chemical space.
+
+Additionally, we quantify structural diversity using Bemis-Murcko scaffolds, average Tanimoto similarity of fingerprints, and sum bottleneck diversity metrics.
 
 ## 03 - Data Preparation for Machine Learning
 
