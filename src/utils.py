@@ -74,7 +74,7 @@ def check_pains_brenk(df, mols, method="both", thresh=0):
         mol (RDKit Mol): The molecule to evaluate.
 
         Returns:
-        bool: 
+        bool:
             - True if the molecule has no PAINS/Brenk matches or matches fewer than or equal to the threshold.
             - False if the molecule exceeds the threshold of PAINS/Brenk matches.
         """
