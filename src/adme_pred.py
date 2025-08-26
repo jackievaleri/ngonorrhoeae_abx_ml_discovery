@@ -1,3 +1,15 @@
+"""NOTE:
+
+This script is reproduced in full from:
+https://github.com/ikmckenz/adme-pred-py/blob/master/adme_pred/adme_pred.py
+
+I was having issues pip installing the package, so I decided to have a local copy of the script.
+
+Many thanks to Ian McKenzie (ikmckenz) for developing this script.
+"""
+
+
+
 """This library supports computational drug discovery by implementing several
 druglikenss filters, medicinal chemistry filters, and provides an easy to use
 wrapping API for common cheminformatics calculations."""
