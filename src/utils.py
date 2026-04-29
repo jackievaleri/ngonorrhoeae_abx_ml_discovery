@@ -1,3 +1,5 @@
+"""Utility functions for processing and analyzing molecular prediction results."""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -8,7 +10,7 @@ from rdkit.Chem.FilterCatalog import FilterCatalog, FilterCatalogParams
 from rdkit.Chem.Scaffolds import MurckoScaffold
 from sklearn.cluster import AgglomerativeClustering
 
-from adme_pred import ADME  # pip install ADME_predict is NOT the right one
+from additional_analyses.adme_pred import ADME  # pip install ADME_predict is NOT the right one
 
 # SECTION 1: MOLECULAR FILTERS
 
