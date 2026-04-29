@@ -281,6 +281,7 @@ def deduplicate_on_tan_sim(df, mols):
 
 # SECTION 2: PROCESSING FUNCTIONS
 
+
 def rank_order_preds(smis, scos, path):
     """
     Ranks molecules by their prediction scores and plots score vs. rank.

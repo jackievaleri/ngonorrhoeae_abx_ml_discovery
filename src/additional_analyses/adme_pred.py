@@ -7,13 +7,11 @@ I was having issues pip installing the package, so I decided to have a local cop
 
 Many thanks to Ian McKenzie (ikmckenz) for developing this script,
 even though we didn't end up using this analysis in the final manuscript.
-"""
 
-
-
-"""This library supports computational drug discovery by implementing several
+This library supports computational drug discovery by implementing several
 druglikenss filters, medicinal chemistry filters, and provides an easy to use
-wrapping API for common cheminformatics calculations."""
+wrapping API for common cheminformatics calculations.
+"""
 
 import os
 

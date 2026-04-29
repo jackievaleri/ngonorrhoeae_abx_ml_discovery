@@ -1,9 +1,9 @@
 """Evaluate model predictions with AUROC and AUPR, and optionally plot curves."""
 
-from sklearn import metrics
-from sklearn.metrics import auc, precision_recall_curve, roc_auc_score
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn import metrics
+from sklearn.metrics import auc, precision_recall_curve, roc_auc_score
 
 
 def modeleval(y_true, y_pred, plot=True):
