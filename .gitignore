@@ -40,3 +40,4 @@ data/.DS_Store
 data/data_prep_for_ml/.DS_Store
 models/.DS_Store
 out/predictions_from_models/pk_37k_1round_model/800k/CORRECTED_cutoff0.5_TS0.7_allow_1_brenk_no_pains_no_nitrofuran_11222022/finalmols_annotated_11222022.xlsx
+out/predictions_from_models/pk_37k_1round_model/5m/clean_preds_11_22_2022.csv
