@@ -1,3 +1,41 @@
+# Train Final Models on Full Training Data
+#
+# Overall Goal
+# - Retrain each best model class on the FULL datasets using the hyperparameters
+#   selected from the corresponding hyperparameter optimization runs.
+#
+# Relation to Manuscript
+# - Produces the final models used to compare baselines in Figure 2D and to make the
+#   prospective predictions deployed in Figure 4A and Figure 5A.
+#
+# Best Configurations Trained
+# - Dataset 0: PK screen (11_15_2021)
+# - GNN PK-only FINAL151: init_lr 1e-3, dropout 0.3, hidden 1200, ffn 3, depth 4
+
+# - Dataset 1: PK + 37K screen (03_19_2022)
+# - RFC final_122: num_bits 4096, radius 2, num_trees 250, class_weight balanced (PK + 37K)
+# - SVM final_15: num_bits 4096, radius 2, class_weight balanced (PK + 37K)
+# - FFN final_20: hidden_size 500, ffn_num_layers 3, dropout 0.4 (PK + 37K, Morgan FPs)
+# - GNN PK + 37K FINALbayHO04052022: dropout 0.15, hidden 2300, ffn 3, depth 3
+#   (also trained with --split_type scaffold_balanced as a separate variant)
+
+# Dataset 2: PK + 37K + 1st-round validation (10_26_2022)
+# - GNN PK + 37K + 1st-round val FINALbayHO11152022: dropout 0.25, hidden 800, ffn 2, depth 5
+
+# Dataset 3: PK + 37K + 3-round validation (03_31_2023 - not used in final paper)
+# - GNN PK + 37K + 3-round val FINALbayHO04112023: dropout 0.25, hidden 400, ffn 3, depth 6
+#
+# Run Configuration
+# - Split: scaffold_balanced 80 / 10 / 10
+# - Folds / ensembles: sklearn baselines and PK-only GNN use num_folds 30-50 with
+#   ensemble_size 1; later GNNs use num_folds 5 with ensemble_size 10
+# - Primary metric: prc-auc; extra: auc
+# - GPU 0 for D-MPNN runs
+#
+# Prerequisites
+# - Run 2D_generate_rdkit_fts.sh first to produce the .npz feature files referenced
+#   by --features_path.
+
 cd ../../chemprop/
 
 EXPORT MODEL_PATH=../ngonorrhoeae_abx_ml_discovery/models/other_models/

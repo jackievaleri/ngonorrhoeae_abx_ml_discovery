@@ -1,3 +1,28 @@
+# Train Baseline Models on Full Data with Random (Non-Scaffold) Split
+#
+# Overall Goal
+# - Retrain the best RFC, SVM, and FFN configurations on the full PK + 37K dataset
+#   using a random 80 / 10 / 10 split, in parallel to the scaffold-balanced finals
+#   in 2D_train_final_models_all_data.sh.
+#
+# Relation to Manuscript
+# - Provides random-split counterparts to the scaffold-balanced baseline models
+#   in Figure 2D.
+#
+# Configurations Trained
+# - RFC rfc_RANDOM_final_122: num_bits 4096, radius 2, num_trees 250, class_weight balanced
+# - SVM svm_RANDOM_final_15: num_bits 4096, radius 2, class_weight balanced
+# - FFN ffn_RANDOM_final_20_1: hidden_size 500, ffn_num_layers 3, dropout 0.4 (Morgan FPs, seed 4)
+#
+# Run Configuration
+# - Data: data_prep_for_ml_pk_37k_screen/FULL_03_19_2022.csv (+ matching .npz)
+# - Split: random, 80 / 10 / 10
+# - Folds: RFC 30, SVM 30, FFN 6
+# - Primary metric: prc-auc; extra: auc
+#
+# Prerequisites
+# - Run 2D_generate_rdkit_fts.sh first to produce the .npz feature files.
+
 cd ../chemprop-master/
 
 export DATA_PATH=../data/data_prep_for_ml/data_prep_for_ml_pk_37k_screen/

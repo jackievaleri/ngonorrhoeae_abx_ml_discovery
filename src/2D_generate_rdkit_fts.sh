@@ -1,3 +1,27 @@
+# Generate RDKit 2D Normalized Features
+#
+# Overall Goal
+# - Precompute RDKit 2D normalized molecular descriptors as .npz feature files for
+#   each TRAIN / TEST / FULL split, across all four screen rounds.
+#
+# Relation to Manuscript
+# - Prerequisite step for all D-MPNN, RFC, SVM, and FFN training and hyperparameter
+#   optimization scripts that pass --features_path; supports models reported in
+#   Figure 2D and Figures 4A / 5A.
+#
+# Datasets Featurized
+# - Dataset 0: PK screen (11_15_2021)
+# - Dataset 1: PK + 37K screen (03_19_2022)
+# - Dataset 2: PK + 37K + 1st-round validation (10_26_2022)
+# - Dataset 3: PK + 37K + 3-round validation (03_31_2023)
+#
+# Tooling
+# - chemprop scripts/save_features.py with --features_generator rdkit_2d_normalized.
+#
+# Prerequisites
+# - chemprop installed (https://chemprop.readthedocs.io/en/latest/installation.html);
+#   update the cd path to point to your local chemprop/scripts folder.
+
 # need to first install chemprop (I recommend option 2): https://chemprop.readthedocs.io/en/latest/installation.html
 
 # activate venv
