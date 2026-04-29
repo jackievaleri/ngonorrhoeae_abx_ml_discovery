@@ -36,6 +36,9 @@ All later GNN finals use scaffold-balanced 80/10/10 splits with `num_folds 5`
 and `ensemble_size 10` (50 model checkpoints per directory).
 
 ### `pk_screen_models_11152021/` — *PK-only baseline GNN*
+
+**NOTE: This model is not used in the manuscript, but left for interested readers**
+
 Trained on [data/data_prep_for_ml/data_prep_for_ml_pk_screen/](../data/data_prep_for_ml/data_prep_for_ml_pk_screen/) (`FULL_11_15_2021.{csv,npz}`, ~1.7K compounds).
 
 | Subdir / file | Description |
@@ -70,6 +73,9 @@ Trained on [data/data_prep_for_ml/data_prep_for_ml_pk_37k_first_round_val_screen
 | [hyperopt_seeds.txt](pk_37k_first_round_val_screen_models_10262022/hyperopt_seeds.txt), [quiet.log](pk_37k_first_round_val_screen_models_10262022/quiet.log), [verbose.log](pk_37k_first_round_val_screen_models_10262022/verbose.log) | Bayesian hyperopt logs. |
 
 ### `pk_37k_three_rounds_val_models_03312023/` — *Round 3 GNN (PK + 37K + 3 rounds val)*
+
+**NOTE: This model is not used in the manuscript, but left for interested readers**
+
 Trained on [data/data_prep_for_ml/data_prep_for_ml_pk_37k_three_rounds_val/](../data/data_prep_for_ml/data_prep_for_ml_pk_37k_three_rounds_val/) (`FULL_03_31_2023.csv`).
 
 | Subdir / file | Description |
