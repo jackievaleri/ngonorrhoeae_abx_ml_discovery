@@ -1,3 +1,5 @@
+"""Utility functions for processing and analyzing molecular prediction results."""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
