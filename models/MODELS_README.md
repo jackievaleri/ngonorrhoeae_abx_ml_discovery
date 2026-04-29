@@ -35,9 +35,9 @@ selected in [2D_hyperparameter_optimization_with_bayesian_optimization.sh](../sr
 All later GNN finals use scaffold-balanced 80/10/10 splits with `num_folds 5`
 and `ensemble_size 10` (50 model checkpoints per directory).
 
-### `pk_screen_models_11152021/` — *PK-only baseline GNN*
+### `pk_screen_models_11152021/` — *PK-only baseline GNN (Round 0)*
 
-**NOTE: This model is not used in the manuscript, but left for interested readers**
+**NOTE: This model is used only to generate Figure 2E. Outside of Figure 2E it is not used in the manuscript and is left for interested readers.**
 
 Trained on [data/data_prep_for_ml/data_prep_for_ml_pk_screen/](../data/data_prep_for_ml/data_prep_for_ml_pk_screen/) (`FULL_11_15_2021.{csv,npz}`, ~1.7K compounds).
 
