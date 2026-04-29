@@ -29,7 +29,7 @@
 #   (see https://github.com/chemprop/chemprop/issues/178):
 #   conda install -c conda-forge rdkit=2019.09.1
 
-export MODEL_PATH=../models/FINALbayHO04052022/;
+export MODEL_PATH=../models/pk_37k_screen_models_03192022/FINALbayHO04052022/;
 export DATA_PATH=../out/interpretation/mols_for_interpretation/;
 export OUT_PATH=../out/interpretation/interpretation_results/;
 

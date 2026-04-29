@@ -54,7 +54,7 @@ EXPORT MODEL_NAME=ffn_final_20
 mkdir "$MODEL_PATH""$MODEL_NAME"; python train.py  --hidden_size 500 --ffn_num_layers 3 --dropout 0.4 --save_dir "$MODEL_PATH""$MODEL_NAME" --data_path "$DATA_PATH"FULL_03_19_2022.csv --num_folds 30 --dataset_type classification --features_generator morgan --no_features_scaling --split_type scaffold_balanced --split_sizes 0.8 0.1 0.1 --smiles_columns SMILES --target_columns hit --depth 0 --features_only --metric prc-auc --extra_metrics auc
 
 # GNN on PK screen alone
-EXPORT MODEL_PATH=../ngonorrhoeae_abx_ml_discovery/pk_screen_models_11152021/
+EXPORT MODEL_PATH=../ngonorrhoeae_abx_ml_discovery/models/pk_screen_models_11152021/
 EXPORT MODEL_NAME=FINAL151
 EXPORT DATA_PATH=../ngonorrhoeae_abx_ml_discovery/data/data_prep_for_ml/data_prep_for_ml_pk_screen/
 mkdir "$MODEL_PATH""$MODEL_NAME"; chemprop_train --init_lr 0.001 --dropout 0.3 --hidden_size 1200 --ffn_num_layers 3 --depth 4 --save_dir "$MODEL_PATH""$MODEL_NAME" --data_path "$DATA_PATH"FULL_11_15_2021.csv --dataset_type classification --features_path "$DATA_PATH"FULL_11_15_2021.npz --no_features_scaling --num_folds 50 --ensemble_size 1 --split_type scaffold_balanced --split_sizes 0.8 0.1 0.1 --smiles_columns SMILES --target_columns hit --metric prc-auc --extra_metrics auc
