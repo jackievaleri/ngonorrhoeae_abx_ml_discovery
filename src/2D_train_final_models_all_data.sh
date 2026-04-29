@@ -9,7 +9,7 @@
 #   prospective predictions deployed in Figure 4A and Figure 5A.
 #
 # Best Configurations Trained
-# - Dataset 0: PK screen (11_15_2021)
+# - Dataset 0: PK screen (11_15_2021)  -- *not used in the manuscript, left for interested readers*
 # - GNN PK-only FINAL151: init_lr 1e-3, dropout 0.3, hidden 1200, ffn 3, depth 4
 
 # - Dataset 1: PK + 37K screen (03_19_2022)
@@ -22,7 +22,7 @@
 # Dataset 2: PK + 37K + 1st-round validation (10_26_2022)
 # - GNN PK + 37K + 1st-round val FINALbayHO11152022: dropout 0.25, hidden 800, ffn 2, depth 5
 
-# Dataset 3: PK + 37K + 3-round validation (03_31_2023 - not used in final paper)
+# Dataset 3: PK + 37K + 3-round validation (03_31_2023)  -- *not used in the manuscript, left for interested readers*
 # - GNN PK + 37K + 3-round val FINALbayHO04112023: dropout 0.25, hidden 400, ffn 3, depth 6
 #
 # Run Configuration
@@ -54,6 +54,7 @@ EXPORT MODEL_NAME=ffn_final_20
 mkdir "$MODEL_PATH""$MODEL_NAME"; python train.py  --hidden_size 500 --ffn_num_layers 3 --dropout 0.4 --save_dir "$MODEL_PATH""$MODEL_NAME" --data_path "$DATA_PATH"FULL_03_19_2022.csv --num_folds 30 --dataset_type classification --features_generator morgan --no_features_scaling --split_type scaffold_balanced --split_sizes 0.8 0.1 0.1 --smiles_columns SMILES --target_columns hit --depth 0 --features_only --metric prc-auc --extra_metrics auc
 
 # GNN on PK screen alone
+# NOTE: Round 0 (PK-only) GNN — not used in the final manuscript, left for interested readers.
 EXPORT MODEL_PATH=../ngonorrhoeae_abx_ml_discovery/models/pk_screen_models_11152021/
 EXPORT MODEL_NAME=FINAL151
 EXPORT DATA_PATH=../ngonorrhoeae_abx_ml_discovery/data/data_prep_for_ml/data_prep_for_ml_pk_screen/
@@ -75,6 +76,7 @@ EXPORT DATA_PATH=../ngonorrhoeae_abx_ml_discovery/data/data_prep_for_ml/data_pre
 mkdir "$MODEL_PATH""$MODEL_NAME"; chemprop_train --dropout 0.25 --hidden_size 800 --ffn_num_layers 2 --depth 5 --metric prc-auc --extra_metrics auc --save_dir "$MODEL_PATH""$MODEL_NAME" --data_path "$DATA_PATH"FULL_10_26_2022.csv --dataset_type classification --features_path "$DATA_PATH"FULL_10_26_2022.npz --no_features_scaling --num_folds 5 --ensemble_size 10 --split_type scaffold_balanced --split_sizes 0.8 0.1 0.1 --smiles_columns SMILES --target_columns hit --gpu 0
 
 # GNN on PK+37K screen + 3 rounds validation
+# NOTE: Round 3 GNN — not used in the final manuscript, left for interested readers.
 EXPORT MODEL_PATH=../ngonorrhoeae_abx_ml_discovery/models/pk_37k_three_rounds_val_models_03312023/
 EXPORT MODEL_NAME=FINALbayHO04112023
 EXPORT DATA_PATH=../ngonorrhoeae_abx_ml_discovery/data/data_prep_for_ml/data_prep_for_ml_pk_37k_three_rounds_val/
