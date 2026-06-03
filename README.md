@@ -6,6 +6,10 @@ Discovery of antibiotics active against N. gonorrhoeae using experimental and ma
 
 This folder provides very minimal code and dummy molecules to use one of the models for prediction. You should be able to "quick start" here.
 
+## Models and data
+
+Some of the models and data live on Zenodo instead of within this GitHub repo due to space constraints. Please see related record https://doi.org/10.5281/zenodo.19899207 for full data files.
+
 ## 2A_2B_tsne_plots_quantify_diversity.ipynb - t-SNE Analysis
 
 This notebook uses t-distributed stochastic neighbor embedding (t-SNE) to visualize high-dimensional data in a lower-dimensional space. We perform t-SNE analysis on a dataset of training data and known antibiotics, considering both hits and non-hits, to understand the chemical space.
