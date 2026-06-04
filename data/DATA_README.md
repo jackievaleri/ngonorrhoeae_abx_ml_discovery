@@ -38,7 +38,7 @@ in [screening_data/](screening_data/) and the library annotation files in
 
 | File | Composition | Feeds model |
 | --- | --- | --- |
-| [pk_screen_cleaned.csv](cleaned_screening_data/pk_screen_cleaned.csv) | Pharmakon (PK) library only (~1.7K compounds) | [models/pk_screen_models_11152021/](../models/pk_screen_models_11152021/) — *the Round 0 GNN appears only in Figure 2E; otherwise not used in the manuscript and left for interested readers* |
+| [pk_screen_cleaned.csv](cleaned_screening_data/pk_screen_cleaned.csv) | Pharmakon (PK) library only (~1.7K compounds) | [models/pk_screen_models_11152021/](../models/pk_screen_models_11152021/) — *the Round 0 GNN does not appear in the manuscript but is left for interested readers* |
 | [pk_37k_screen_cleaned.csv](cleaned_screening_data/pk_37k_screen_cleaned.csv) | PK + 37K combined screen (~38K) — **Round 1** training set | [models/pk_37k_screen_models_03192022/](../models/pk_37k_screen_models_03192022/) |
 | [pk_37k_first_round_val_cleaned.csv](cleaned_screening_data/pk_37k_first_round_val_cleaned.csv) | PK + 37K + 1st round of experimentally validated predictions — **Round 2** training set | [models/pk_37k_first_round_val_screen_models_10262022/](../models/pk_37k_first_round_val_screen_models_10262022/) (used by [minimal_example_start_here/](../minimal_example_start_here/)) |
 | [pk_37k_three_rounds_val_cleaned.csv](cleaned_screening_data/pk_37k_three_rounds_val_cleaned.csv) | PK + 37K + 3 rounds of validated predictions (~38.8K) — **Round 3** training set | [models/pk_37k_three_rounds_val_models_03312023/](../models/pk_37k_three_rounds_val_models_03312023/) — *not used in the manuscript, left for interested readers* |
@@ -57,7 +57,7 @@ generated via `chemprop-master/scripts/save_features.py` (see
 SVM, FFN) trained in [2D_hyperparameter_optimization_scripts_for_chemprop_models.ipynb](../src/2D_hyperparameter_optimization_scripts_for_chemprop_models.ipynb).
 
 ### `data_prep_for_ml_pk_screen/` — 2021-11-15
-**NOTE: This data prep feeds the Round 0 (PK-only) baseline GNN, which appears only in Figure 2E of the manuscript and is otherwise superseded by the PK + 37K Round 1 model. Left for interested readers.**
+**NOTE: This data prep feeds the Round 0 (PK-only) baseline GNN, which does not appear in the manuscript and is otherwise superseded by the PK + 37K Round 1 model. Left for interested readers.**
 
 PK-only splits feeding [models/pk_screen_models_11152021/](../models/pk_screen_models_11152021/).
 Contains `FULL_11_15_2021.{csv,npz}`, `TRAIN_11_15_2021.{csv,npz}`,

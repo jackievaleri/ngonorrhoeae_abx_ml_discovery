@@ -9,7 +9,7 @@
 #   prospective predictions deployed in Figure 4A and Figure 5A.
 #
 # Best Configurations Trained
-# - Dataset 0: PK screen (11_15_2021)  -- *Round 0 GNN used only to generate Figure 2E; otherwise left for interested readers*
+# - Dataset 0: PK screen (11_15_2021)  -- *Round 0 GNN is not used in the manuscript; otherwise left for interested readers*
 # - GNN PK-only FINAL151: init_lr 1e-3, dropout 0.3, hidden 1200, ffn 3, depth 4
 
 # - Dataset 1: PK + 37K screen (03_19_2022)
@@ -54,7 +54,7 @@ EXPORT MODEL_NAME=ffn_final_20
 mkdir "$MODEL_PATH""$MODEL_NAME"; python train.py  --hidden_size 500 --ffn_num_layers 3 --dropout 0.4 --save_dir "$MODEL_PATH""$MODEL_NAME" --data_path "$DATA_PATH"FULL_03_19_2022.csv --num_folds 30 --dataset_type classification --features_generator morgan --no_features_scaling --split_type scaffold_balanced --split_sizes 0.8 0.1 0.1 --smiles_columns SMILES --target_columns hit --depth 0 --features_only --metric prc-auc --extra_metrics auc
 
 # GNN on PK screen alone
-# NOTE: Round 0 (PK-only) GNN — used in the manuscript only to generate Figure 2E; otherwise left for interested readers.
+# NOTE: Round 0 (PK-only) GNN — not used in the manuscript; otherwise left for interested readers.
 EXPORT MODEL_PATH=../ngonorrhoeae_abx_ml_discovery/models/pk_screen_models_11152021/
 EXPORT MODEL_NAME=FINAL151
 EXPORT DATA_PATH=../ngonorrhoeae_abx_ml_discovery/data/data_prep_for_ml/data_prep_for_ml_pk_screen/

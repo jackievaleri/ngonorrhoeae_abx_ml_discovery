@@ -1,7 +1,7 @@
 # Hyperparameter Grid Search: D-MPNN GNN on the PK-Only Screen
 #
-# NOTE: This script trains the Round 0 (PK-only) baseline GNN. The model produced
-# here is used in the manuscript only to generate Figure 2E; it is otherwise left
+# NOTE: This script trains the Round 0 (PK-only) baseline GNN.
+# The model produced here is not used in the manuscript; it is otherwise left
 # in the repository for interested readers. The manuscript-reported GNNs that
 # drive the prospective predictions start at Round 1 (PK + 37K) and are configured
 # in 2D_hyperparameter_optimization_with_bayesian_optimization.sh.
@@ -11,7 +11,7 @@
 #   trained on the initial Pharmakon-1.7K screen alone.
 #
 # Relation to Manuscript
-# - Selects the PK-only GNN architecture used in Figure 2E only; otherwise provided
+# - Selects the PK-only GNN architecture which is not used in the manuscript; otherwise provided
 #   as a reference / starting point preceding the PK + 37K Bayesian optimization runs.
 #
 # Sweep (432 configurations)
