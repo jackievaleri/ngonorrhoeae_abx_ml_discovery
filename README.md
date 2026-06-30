@@ -8,7 +8,7 @@ This folder provides very minimal code and dummy molecules to use one of the mod
 
 ## Models and data
 
-Some of the models and data live on Zenodo instead of within this GitHub repo due to space constraints. Please see related record https://doi.org/10.5281/zenodo.20544737 for full data files.
+Some of the models and data live on Zenodo instead of within this GitHub repo due to space constraints. Please see related record https://doi.org/10.5281/zenodo.19899206 for full data files.
 
 ## 2A_2B_tsne_plots_quantify_diversity.ipynb - t-SNE Analysis
 
