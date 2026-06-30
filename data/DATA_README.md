@@ -97,9 +97,8 @@ prediction targets used by [4A_5A_make_predictions_using_best_models.ipynb](../s
 | File | Date | Description |
 | --- | --- | --- |
 | [PK180301.xls](library_info/PK180301.xls) | 2021-10-06 | Pharmakon plate map from Broad (plate/well → name). |
-| [pk_np_smiles_mapping_manual.csv](library_info/pk_np_smiles_mapping_manual.csv) | 2025-08-25 | Manually validated Name → SMILES → Activity mapping for the PK library. |
+| [pk_np_smiles_mapping_manual.csv](library_info/pk_np_smiles_mapping_manual.csv) | 2025-08-25 | Manually validated Name → SMILES. |
 | [NeisseriaGonorrhoeaePharmakonScreen.csv](screening_data/NeisseriaGonorrhoeaePharmakonScreen.csv) | (see `screening_data/`) | — |
-| [Broad Compound Registration Melis to date.xlsx](library_info/Broad%20Compound%20Registration%20Melis%20to%20date.xlsx) | 2023-03-29 | Broad registration metadata for the validation compounds ordered/tested by Melis. |
 | [37Kclean.csv](library_info/37Kclean.csv) | 2025-08-25 | Cleaned 37K screening library (SMILES). |
 | [37Kclean.npz](library_info/37Kclean.npz) | 2023-04-14 | `rdkit_2d_normalized` features for the 37K library. |
 | [broad800k.csv](library_info/broad800k.csv) | 2020-09-10 | ~800K Broad compound library used as the primary virtual screen target. |
@@ -133,10 +132,7 @@ produced in [4A_5A_filter_predictions_to_prioritize_compounds_for_validation.ipy
 
 | File | Date | Description |
 | --- | --- | --- |
-| [B800K_EasyMedHard_ValidationData for Jackie.xlsx](validated_model_predictions/B800K_EasyMedHard_ValidationData%20for%20Jackie.xlsx) | 2022-09-28 | Easy/Medium/Hard tier validation results from the 800K virtual screen. |
-| [easy_medium_hard_broad800k_val_sets.xlsx](validated_model_predictions/easy_medium_hard_broad800k_val_sets.xlsx) | 2022-10-03 | Companion sheet defining the Easy/Med/Hard validation tier membership. |
 | [cleaned_easy_med_hard_val_sets_800k_10_03_2022.csv](validated_model_predictions/cleaned_easy_med_hard_val_sets_800k_10_03_2022.csv) | 2022-10-03 | Cleaned Easy/Med/Hard validation set (`hit, SMILES, name`). |
 | [cleaned_easy_med_hard_val_sets_800k_10_03_2022.npz](validated_model_predictions/cleaned_easy_med_hard_val_sets_800k_10_03_2022.npz) | 2022-10-03 | `rdkit_2d_normalized` features for the cleaned Easy/Med/Hard set. |
 | [2022-10-21 Broad800K validation with MP order 1 data summary Jackie.xlsx](validated_model_predictions/2022-10-21%20Broad800K%20validation%20with%20MP%20order%201%20data%20summary%20Jackie.xlsx) | 2022-10-26 | Round 1 validation summary — fed into the Round 2 training set (`pk_37k_first_round_val_cleaned.csv`). |
 | [2023-03-27 Data update for Jackie.xlsx](validated_model_predictions/2023-03-27%20Data%20update%20for%20Jackie.xlsx) | 2023-03-28 | Rounds 2 + 3 validation update — fed into the Round 3 training set. |
-| [cleaned_round2_round3_val.csv](validated_model_predictions/cleaned_round2_round3_val.csv) | 2023-04-19 | Cleaned Round 2 + Round 3 validation labels (`Name, hit, SMILES`). |
